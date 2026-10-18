@@ -7,6 +7,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
 import { ProjectVisual } from "@/components/project-visual";
+import { CaseStudyArticle } from "@/components/case-study-article";
 
 export function generateStaticParams() {
   return projects.map(({ slug }) => ({ slug }));
@@ -21,7 +22,9 @@ export async function generateMetadata({
   const project = projects.find((p) => p.slug === slug);
   return {
     title: project
-      ? `${project.title} — Illustrative concept`
+      ? project.kind === "concept"
+        ? `${project.title} — Illustrative concept`
+        : project.title
       : "Project not found",
     description: project?.description,
   };
@@ -36,9 +39,14 @@ export default async function CaseStudy({
   const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
   const next = projects[(projects.indexOf(project) + 1) % projects.length];
+  if (project.kind === "case-study") {
+    return (
+      <CaseStudyArticle project={project} totalProjects={projects.length} />
+    );
+  }
   return (
     <div id="top">
-      <Navigation />
+      <Navigation workCount={projects.length} />
       <main id="main">
         <section className="case-hero container">
           <Link href="/#work" className="text-link">
@@ -168,7 +176,11 @@ export default async function CaseStudy({
           </Reveal>
           <Link href={`/work/${next.slug}`} className="next-project">
             <div>
-              <span className="eyebrow">NEXT EXPLORATION</span>
+              <span className="eyebrow">
+                {next.kind === "case-study"
+                  ? "NEXT CASE STUDY"
+                  : "NEXT EXPLORATION"}
+              </span>
               <h2>{next.title}</h2>
             </div>
             <ArrowUpRight size={42} strokeWidth={1.2} />

@@ -1,22 +1,46 @@
-export type Project = {
+import { pickmeSearchRevamp } from "./case-studies/pickme-search-revamp";
+import type { SourceCaseStudy } from "./case-studies/types";
+
+type ProjectBase = {
   slug: string;
   number: string;
   title: string;
   category: string;
   description: string;
-  visual: "workspace" | "mobile";
   tags: string[];
+};
+
+export type ConceptProject = ProjectBase & {
+  kind: "concept";
+  visual: "workspace" | "mobile";
   premise: string;
   rationale: string;
   flow: string[];
 };
 
-// These are explicitly illustrative directions, not claims about client work.
-// Replace them with approved project facts and original designs when supplied.
+export type CaseStudyProject = ProjectBase & {
+  kind: "case-study";
+  article: SourceCaseStudy;
+};
+
+export type Project = ConceptProject | CaseStudyProject;
+
+// Documented case studies and illustrative concepts remain explicitly distinct.
 export const projects: Project[] = [
   {
-    slug: "clarity-at-scale",
+    kind: "case-study",
+    slug: "pickme-search-revamp",
     number: "01",
+    title: pickmeSearchRevamp.title,
+    category: "Super App · Search UX",
+    description: pickmeSearchRevamp.subtitle,
+    tags: pickmeSearchRevamp.tags,
+    article: pickmeSearchRevamp,
+  },
+  {
+    kind: "concept",
+    slug: "clarity-at-scale",
+    number: "02",
     title: "Clarity at scale.",
     category: "SaaS & complex digital products",
     description:
@@ -35,8 +59,9 @@ export const projects: Project[] = [
     ],
   },
   {
+    kind: "concept",
     slug: "everyday-connected",
-    number: "02",
+    number: "03",
     title: "Everyday, connected.",
     category: "Mobile applications & super apps",
     description:

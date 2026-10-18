@@ -4,7 +4,13 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-export function Navigation({ home = false }: { home?: boolean }) {
+export function Navigation({
+  home = false,
+  workCount,
+}: {
+  home?: boolean;
+  workCount?: number;
+}) {
   const [open, setOpen] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
   const menu = useRef<HTMLDivElement>(null);
@@ -45,7 +51,10 @@ export function Navigation({ home = false }: { home?: boolean }) {
       </span>
       <nav aria-label="Main navigation" className="desktop-nav">
         <Link href={`${base}#work`}>
-          Work <span>02</span>
+          Works{" "}
+          {workCount !== undefined && (
+            <span>{String(workCount).padStart(2, "0")}</span>
+          )}
         </Link>
         <Link href={`${base}#about`}>About</Link>
         <Link href={`${base}#contact`} className="nav-contact">
@@ -67,7 +76,7 @@ export function Navigation({ home = false }: { home?: boolean }) {
         <div id="mobile-navigation" className="mobile-menu" ref={menu}>
           <nav aria-label="Mobile navigation">
             <Link href={`${base}#work`} onClick={() => setOpen(false)}>
-              Work <ArrowUpRight size={20} />
+              Works <ArrowUpRight size={20} />
             </Link>
             <Link href={`${base}#about`} onClick={() => setOpen(false)}>
               About <ArrowUpRight size={20} />

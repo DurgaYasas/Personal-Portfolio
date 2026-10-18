@@ -29,7 +29,7 @@ const approach = [
 export default function Home() {
   return (
     <div id="top">
-      <Navigation home />
+      <Navigation home workCount={projects.length} />
       <main id="main">
         <Hero />
 
@@ -40,9 +40,9 @@ export default function Home() {
         >
           <Reveal>
             <div className="section-topline">
-              <span className="eyebrow">01 / SELECTED DIRECTIONS</span>
+              <span className="eyebrow">01 / WORKS</span>
               <span className="section-aside">
-                A FEW WAYS I THINK ABOUT DESIGN <ArrowDownRight size={15} />
+                CASE STUDIES & DESIGN EXPLORATIONS <ArrowDownRight size={15} />
               </span>
             </div>
             <div className="work-heading">
@@ -52,7 +52,7 @@ export default function Home() {
                 <span>More possibility.</span>
               </h2>
               <p>
-                Explorations across the products
+                Selected work across the products
                 <br />
                 and experiences I design.
               </p>
@@ -60,14 +60,17 @@ export default function Home() {
           </Reveal>
           <div className="project-grid">
             {projects.map((project, index) => (
-              <Reveal key={project.slug} delay={index * 0.08}>
+              <Reveal
+                key={project.slug}
+                delay={index * 0.08}
+                className={project.kind === "case-study" ? "featured-case" : ""}
+              >
                 <ProjectCard project={project} />
               </Reveal>
             ))}
           </div>
           <p className="work-disclosure">
-            <span /> Concept UI is illustrative. Detailed project stories will
-            follow with original source material.
+            <span /> Illustrative explorations are labeled on each card.
           </p>
         </section>
 

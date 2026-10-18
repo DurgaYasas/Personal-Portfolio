@@ -196,8 +196,14 @@ p {
 }
 .project-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 30px;
+}
+.featured-case {
+  grid-column: 1 / -1;
+}
+.project-grid > div {
+  min-width: 0;
 }
 .project-image-wrap {
   position: relative;
@@ -265,10 +271,15 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   font-size: 28px;
   font-weight: 550;
   letter-spacing: -1.1px;
   margin-top: 9px;
+}
+.project-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .project-link > h3 > svg {
   width: 24px;

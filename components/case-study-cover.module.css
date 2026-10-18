@@ -1,0 +1,189 @@
+.cover {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 2.35;
+  min-height: 260px;
+  overflow: hidden;
+  padding: 36px 42px;
+  background: #171912;
+  color: #f4f2d8;
+  border: 1px solid #363a27;
+  border-radius: 5px;
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  right: 34%;
+  background: #333624;
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: radial-gradient(#a4ab83 0.6px, transparent 0.6px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.topline,
+.bottomline {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wordmark {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+  color: #ffe462;
+}
+.wordmark > span {
+  font-size: 8px;
+  vertical-align: super;
+  margin-left: 3px;
+}
+.topline > span:last-child {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #c2c8a7;
+}
+.composition {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-block: 35px;
+}
+.composition > div:first-child {
+  min-width: 0;
+}
+.kicker {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #c2c8a7;
+}
+.title {
+  font-size: clamp(32px, 5vw, 72px);
+  letter-spacing: -0.065em;
+  line-height: 1.06;
+  font-weight: 550;
+  margin-top: 14px;
+}
+.title > span {
+  color: #ffe462;
+}
+.searchMark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 27%;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  margin-right: 5%;
+  color: #ffe462;
+}
+.searchMark > svg {
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  height: 70%;
+}
+.orbit,
+.orbitOuter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #656941;
+}
+.orbitOuter {
+  width: 135%;
+  height: 135%;
+  border-color: #363a27;
+}
+.bottomline {
+  font-size: 8px;
+  letter-spacing: 0.8px;
+  color: #c2c8a7;
+}
+.bottomline > span {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.bottomline i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffe462;
+}
+.bottomline > svg {
+  color: #ffe462;
+}
+.detail {
+  aspect-ratio: 2.75;
+}
+.detail .composition {
+  padding-block: 20px;
+}
+.detail .searchMark {
+  width: 22%;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .cover {
+    aspect-ratio: 2;
+  }
+  .detail {
+    aspect-ratio: 2.1;
+  }
+}
+@media (max-width: 760px) {
+  .cover {
+    padding: 24px;
+    aspect-ratio: 1.5;
+    min-height: 275px;
+  }
+  .topline > span:last-child {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .wordmark {
+    font-size: 20px;
+  }
+  .composition {
+    padding-block: 26px;
+  }
+  .title {
+    font-size: clamp(30px, 7.7vw, 48px);
+  }
+  .kicker {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .searchMark {
+    width: 25%;
+    margin-right: 1%;
+  }
+  .bottomline {
+    font-size: 6px;
+  }
+  .bottomline > span {
+    gap: 8px;
+  }
+  .bottomline > svg {
+    width: 17px;
+    height: 17px;
+  }
+}
