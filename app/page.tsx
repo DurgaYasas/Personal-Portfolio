@@ -1,11 +1,10 @@
-import Link from "next/link";
 import {
-  ArrowDown,
   ArrowDownRight,
   ArrowUpRight,
   Asterisk,
   MoveUpRight,
 } from "lucide-react";
+import { Hero } from "@/components/hero";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
@@ -32,72 +31,7 @@ export default function Home() {
     <div id="top">
       <Navigation home />
       <main id="main">
-        <section className="hero container" aria-labelledby="hero-title">
-          <Reveal>
-            <div className="hero-intro">
-              <span className="eyebrow">
-                <span className="status-dot" /> HELLO, I’M DURGA YASAS
-              </span>
-              <span className="hero-role">SENIOR PRODUCT DESIGNER</span>
-            </div>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <div className="hero-heading-wrap">
-              <h1 id="hero-title">
-                Making complex
-                <br /> feel{" "}
-                <span className="simple-word">
-                  simple
-                  <svg
-                    viewBox="0 0 460 22"
-                    fill="none"
-                    preserveAspectRatio="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 16C102 4 286 1 453 9"
-                      stroke="currentColor"
-                      strokeWidth="9"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-                <span className="hero-period">.</span>
-              </h1>
-              <div className="design-seal" aria-hidden="true">
-                <span>THOUGHTFUL BY DESIGN</span>
-                <Asterisk strokeWidth={1.1} />
-                <span>HUMAN AT HEART</span>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <div className="hero-bottom">
-              <div className="hero-description">
-                <span className="intro-arrow">
-                  <ArrowDownRight size={30} strokeWidth={1.3} />
-                </span>
-                <p>
-                  I turn complex challenges into clear,
-                  <br className="desktop-break" /> considered digital
-                  experiences.
-                </p>
-              </div>
-              <Link href="#work" className="explore-link">
-                <span>EXPLORE THE WORK</span>
-                <span className="circle-button">
-                  <ArrowDown size={18} />
-                </span>
-              </Link>
-            </div>
-          </Reveal>
-          <div className="hero-footnote">
-            <span>
-              PRODUCT STRATEGY <i /> DIGITAL EXPERIENCES <i /> VISUAL CRAFT
-            </span>
-            <span>SCROLL TO DISCOVER</span>
-          </div>
-        </section>
+        <Hero />
 
         <section
           id="work"
@@ -190,7 +124,11 @@ export default function Home() {
 
         <Reveal>
           <div className="design-note container">
-            <span className="note-star">✳</span>
+            <Asterisk
+              className="note-star"
+              strokeWidth={1.4}
+              aria-hidden="true"
+            />
             <p>
               Good design is how it looks.
               <br />
