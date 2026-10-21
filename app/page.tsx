@@ -5,6 +5,8 @@ import {
   MoveUpRight,
 } from "lucide-react";
 import { Hero } from "@/components/hero";
+import { CareerJourney } from "@/components/career-journey";
+import { SkillsExpertise } from "@/components/skills-expertise";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
@@ -32,6 +34,8 @@ export default function Home() {
       <Navigation home workCount={projects.length} />
       <main id="main">
         <Hero />
+        <CareerJourney />
+        <SkillsExpertise />
 
         <section
           id="work"
@@ -40,7 +44,7 @@ export default function Home() {
         >
           <Reveal>
             <div className="section-topline">
-              <span className="eyebrow">01 / WORKS</span>
+              <span className="eyebrow">03 / WORKS</span>
               <span className="section-aside">
                 CASE STUDIES & DESIGN EXPLORATIONS <ArrowDownRight size={15} />
               </span>
@@ -75,13 +79,13 @@ export default function Home() {
         </section>
 
         <section
-          id="about"
+          id="approach"
           className="about-section container"
           aria-labelledby="about-title"
         >
           <Reveal>
             <div className="section-topline">
-              <span className="eyebrow">02 / A LITTLE ABOUT ME</span>
+              <span className="eyebrow">04 / DESIGN APPROACH</span>
               <Asterisk size={25} strokeWidth={1.3} />
             </div>
             <div className="about-grid">
