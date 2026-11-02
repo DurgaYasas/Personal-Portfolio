@@ -11,35 +11,35 @@ export const careerJourney = [
     period: "2017 - 2021",
     role: "Product Designer & Business Analyst",
     company: "LiveRoom (OGMO)",
-    color: "#b47dff",
+    color: "var(--accent-secondary)",
   },
   {
     id: "pickme",
     period: "2021 - 2022",
     role: "UX Designer",
     company: "PickMe",
-    color: "#35d5a4",
+    color: "var(--accent-secondary)",
   },
   {
     id: "arimac",
     period: "2022 - 2023",
     role: "Senior UX Designer",
     company: "Arimac (for Du Mobile UAE)",
-    color: "#ffd04c",
+    color: "var(--ink)",
   },
   {
     id: "pickme-food-market",
     period: "2023 - Present",
     role: "Senior UX Designer",
     company: "PickMe (Food & Market Team)",
-    color: "#4b9fff",
+    color: "var(--accent)",
   },
   {
     id: "freelance",
     period: "2021 - Present",
     role: "Freelance Product Designer",
     company: "KAST, Redblocks, Ingenii IoT etc.",
-    color: "#2bd8ed",
+    color: "var(--accent)",
   },
 ] as const;
 
@@ -64,7 +64,7 @@ export const skillGroups: SkillGroup[] = [
     id: "design-excellence",
     title: "Design Excellence",
     icon: "design",
-    color: "#4b9fff",
+    color: "var(--accent)",
     skills: [
       { label: "UX/UI Design & Design Systems", value: 95 },
       { label: "User Research & Testing", value: 90 },
@@ -76,7 +76,7 @@ export const skillGroups: SkillGroup[] = [
     id: "ai-innovation",
     title: "AI & Innovation",
     icon: "ai",
-    color: "#b47dff",
+    color: "var(--accent-secondary)",
     skills: [
       { label: "AI-Powered Rapid Prototyping", value: 88 },
       { label: "AI Design Tools", value: 85 },
@@ -88,7 +88,7 @@ export const skillGroups: SkillGroup[] = [
     id: "technical-skills",
     title: "Technical Skills",
     icon: "technical",
-    color: "#2bd8ed",
+    color: "var(--accent)",
     skills: [
       { label: "Figma & Adobe XD", value: 98 },
       { label: "Protopie & Stitch", value: 85 },
@@ -99,7 +99,7 @@ export const skillGroups: SkillGroup[] = [
     id: "product-strategy",
     title: "Product Strategy",
     icon: "strategy",
-    color: "#35d5a4",
+    color: "var(--accent-secondary)",
     skills: [
       { label: "Product Roadmap Creation", value: 88 },
       { label: "Agile & Backlog Management", value: 90 },

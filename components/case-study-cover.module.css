@@ -9,9 +9,9 @@
   min-height: 260px;
   overflow: hidden;
   padding: 36px 42px;
-  background: #171912;
-  color: #f4f2d8;
-  border: 1px solid #363a27;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
   border-radius: 5px;
   transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -22,14 +22,17 @@
   top: 0;
   bottom: 0;
   right: 34%;
-  background: #333624;
+  background: var(--line);
 }
 .cover::after {
   content: "";
   position: absolute;
   inset: 0;
   opacity: 0.15;
-  background-image: radial-gradient(#a4ab83 0.6px, transparent 0.6px);
+  background-image: radial-gradient(
+    var(--accent-secondary) 0.6px,
+    transparent 0.6px
+  );
   background-size: 12px 12px;
   pointer-events: none;
 }
@@ -45,7 +48,7 @@
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -1.4px;
-  color: #ffe462;
+  color: var(--accent);
 }
 .wordmark > span {
   font-size: 8px;
@@ -55,7 +58,7 @@
 .topline > span:last-child {
   font-size: 8px;
   letter-spacing: 1.8px;
-  color: #c2c8a7;
+  color: var(--muted);
 }
 .composition {
   position: relative;
@@ -72,7 +75,7 @@
 .kicker {
   font-size: 8px;
   letter-spacing: 2px;
-  color: #c2c8a7;
+  color: var(--muted);
 }
 .title {
   font-size: clamp(32px, 5vw, 72px);
@@ -82,7 +85,7 @@
   margin-top: 14px;
 }
 .title > span {
-  color: #ffe462;
+  color: var(--accent);
 }
 .searchMark {
   position: relative;
@@ -92,7 +95,7 @@
   aspect-ratio: 1;
   flex-shrink: 0;
   margin-right: 5%;
-  color: #ffe462;
+  color: var(--accent);
 }
 .searchMark > svg {
   position: relative;
@@ -106,17 +109,17 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px solid #656941;
+  border: 1px solid var(--accent-line);
 }
 .orbitOuter {
   width: 135%;
   height: 135%;
-  border-color: #363a27;
+  border-color: var(--line);
 }
 .bottomline {
   font-size: 8px;
   letter-spacing: 0.8px;
-  color: #c2c8a7;
+  color: var(--muted);
 }
 .bottomline > span {
   display: flex;
@@ -127,10 +130,10 @@
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: #ffe462;
+  background: var(--accent);
 }
 .bottomline > svg {
-  color: #ffe462;
+  color: var(--accent);
 }
 .detail {
   aspect-ratio: 2.75;

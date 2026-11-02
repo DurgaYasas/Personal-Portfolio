@@ -8,7 +8,7 @@
   margin-inline: auto;
 }
 .eyebrow {
-  color: #4b9fff;
+  color: var(--accent);
   font-size: 10px;
   line-height: 1.6;
   letter-spacing: 1.7px;
@@ -36,16 +36,16 @@
   align-items: center;
   gap: 8px;
   padding: 9px 13px;
-  background: #171827;
-  border: 1px solid #2b2b40;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
   border-radius: 30px;
   font-size: 10px;
   font-weight: 550;
   line-height: 1.6;
-  color: #e0e2ed;
+  color: var(--ink);
 }
 .facts svg {
-  color: #35cef0;
+  color: var(--accent);
 }
 .timeline {
   position: relative;
@@ -58,14 +58,14 @@
   bottom: 80px;
   left: 50%;
   width: 2px;
-  background: #1e2a3f;
+  background: var(--line);
   transform: translateX(-50%);
   pointer-events: none;
 }
 .timelineFill {
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #b47dff, #4b9fff 60%, #2bd8ed);
+  background: linear-gradient(180deg, var(--accent-secondary), var(--accent));
   transform-origin: top;
 }
 .timelineList {
@@ -107,16 +107,16 @@
 .careerCard {
   min-height: 105px;
   padding: 19px 20px;
-  border: 1px solid #282d3b;
+  border: 1px solid var(--line);
   border-radius: 12px;
-  background: #10131c;
+  background: var(--surface);
   transition:
     transform 200ms,
     border-color 200ms,
     box-shadow 200ms;
 }
 .period {
-  color: #a6acc0;
+  color: var(--muted);
   font-size: 10px;
   line-height: 1.7;
 }
@@ -157,8 +157,8 @@
   align-items: flex-start;
   gap: 12px;
   padding: 15px 18px;
-  background: #10131c;
-  border: 1px solid #282d3b;
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 11px;
   transition:
     border-color 200ms,
@@ -170,10 +170,10 @@
   flex-shrink: 0;
   margin-top: 9px;
   border-radius: 50%;
-  background: #2bd8ed;
+  background: var(--accent);
 }
 .achievement p {
-  color: #b2b7cb;
+  color: var(--muted);
   font-size: 12px;
   line-height: 1.85;
 }
@@ -194,8 +194,8 @@
 .skillCard {
   height: 100%;
   padding: 25px;
-  background: #10131c;
-  border: 1px solid #282d3b;
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 13px;
   transition:
     transform 200ms,
@@ -213,7 +213,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--skill-accent) 12%, #10131c);
+  background: color-mix(in srgb, var(--skill-accent) 12%, var(--surface));
   color: var(--skill-accent);
 }
 .skillCard h3 {
@@ -238,7 +238,7 @@
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 8px;
-  color: #b2b7cb;
+  color: var(--muted);
   font-size: 11px;
   line-height: 1.65;
 }
@@ -254,7 +254,7 @@
 .meter {
   width: 100%;
   height: 4px;
-  background: #262a37;
+  background: var(--line);
   overflow: hidden;
   border-radius: 6px;
 }
@@ -268,17 +268,17 @@
 @media (hover: hover) {
   .careerCard:hover {
     transform: translateY(-3px);
-    border-color: color-mix(in srgb, var(--entry-accent) 45%, #282d3b);
-    box-shadow: 0 10px 26px #0002;
+    border-color: color-mix(in srgb, var(--entry-accent) 45%, var(--line));
+    box-shadow: 0 10px 26px color-mix(in srgb, var(--obsidian) 15%, transparent);
   }
   .achievement:hover {
-    background: #131925;
-    border-color: #35445d;
+    background: var(--surface-raised);
+    border-color: var(--line);
   }
   .skillCard:hover {
     transform: translateY(-3px);
-    border-color: color-mix(in srgb, var(--skill-accent) 45%, #282d3b);
-    box-shadow: 0 10px 26px #0002;
+    border-color: color-mix(in srgb, var(--skill-accent) 45%, var(--line));
+    box-shadow: 0 10px 26px color-mix(in srgb, var(--obsidian) 15%, transparent);
   }
 }
 @media (max-width: 760px) {

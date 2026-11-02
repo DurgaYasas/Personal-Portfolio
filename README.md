@@ -37,6 +37,10 @@ No environment variables, API keys, or external services are required. Do not ru
 - `data/case-studies/`: structured, source-based articles. `pickme-search-revamp.ts` transcribes the supplied 16-page **Durga Yasas.pdf**.
 - `components/case-study-article.tsx`: article renderer for text, quotations, statistics, solutions, tables, and replaceable image positions.
 
+## Color palette
+
+The theme uses the supplied Obsidian `#0B0B0B`, Warm Ivory `#ECE8E0`, Burnt Saffron `#C77A2B`, Bronze Sand `#B08A4A`, and Stone Grey `#3F4548`. The five source swatches and semantic tokens are defined in `app/globals.css`; card surfaces, muted text, and hover states are derived from those swatches. Components, skill/career accents, project illustrations, and case-study pages share these tokens. Saffron buttons use obsidian labels for contrast. The standalone favicon uses the same obsidian and saffron swatches.
+
 ## Content status
 
 The confirmed biographical facts come from the supplied brief and hero reference: Durga Yasas is a Senior Product Designer. The reference supplies the availability status, specialization copy, and statistics (7+ years, 5M+ users impacted, and 3 design systems contributed). These are user-supplied profile statistics, not outcomes attributed to the illustrative projects.
