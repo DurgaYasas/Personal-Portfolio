@@ -36,6 +36,7 @@ No environment variables, API keys, or external services are required. Do not ru
 - `data/projects.ts`: typed project directions. Adding an entry generates another project route and homepage card.
 - `data/case-studies/`: structured, source-based articles. `pickme-search-revamp.ts` transcribes the supplied 16-page **Durga Yasas.pdf**.
 - `components/case-study-article.tsx`: article renderer for text, quotations, statistics, solutions, tables, and replaceable image positions.
+- `components/upcoming-case-study.tsx`: a coming-soon page for projects whose articles have not been supplied. Their titles, icons, and cover line breaks are configured in `data/projects.ts`.
 
 ## Color palette
 
@@ -62,7 +63,9 @@ image: {
 
 Use the actual image dimensions and a meaningful description. The renderer replaces that image's placeholder automatically. Original project images will be supplied later; none have been synthesized or extracted as stand-in designs.
 
-The other two project directions and their sample UI remain explicitly illustrative. Their pages distinguish design hypotheses from documented evidence and must not be presented as shipped client work. GitHub is linked using the supplied repository owner's public profile; confirm the preferred contact destination before publication. A resume PDF and email address have not been supplied.
+The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**, using the user-supplied titles. All three homepage cards share the typographic cover style and appear in a single column. The new projects are marked coming soon, and their links open matching placeholder pages. No roles, research, outcomes, or project UI have been added for these two projects. To publish a supplied article, change its project entry from `upcoming` to `case-study` and attach a structured `article`.
+
+GitHub is linked using the supplied repository owner's public profile; confirm the preferred contact destination before publication. A resume PDF and email address have not been supplied.
 
 Motion respects the operating system's reduced-motion preference. Navigation supports keyboard focus, a skip link, and an Escape-dismissable mobile menu. Decorative mockups are hidden from assistive technology.
 

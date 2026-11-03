@@ -46,7 +46,7 @@ export default function Home() {
             <div className="section-topline">
               <span className="eyebrow">03 / WORKS</span>
               <span className="section-aside">
-                CASE STUDIES & DESIGN EXPLORATIONS <ArrowDownRight size={15} />
+                SELECTED CASE STUDIES <ArrowDownRight size={15} />
               </span>
             </div>
             <div className="work-heading">
@@ -67,14 +67,14 @@ export default function Home() {
               <Reveal
                 key={project.slug}
                 delay={index * 0.08}
-                className={project.kind === "case-study" ? "featured-case" : ""}
+                className="featured-case"
               >
                 <ProjectCard project={project} />
               </Reveal>
             ))}
           </div>
           <p className="work-disclosure">
-            <span /> Illustrative explorations are labeled on each card.
+            <span /> More case studies coming soon.
           </p>
         </section>
 

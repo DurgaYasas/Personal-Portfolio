@@ -1,6 +1,12 @@
 import { pickmeSearchRevamp } from "./case-studies/pickme-search-revamp";
 import type { SourceCaseStudy } from "./case-studies/types";
 
+export type ProjectCover = {
+  wordmark: string;
+  icon: "search" | "payment" | "fleet";
+  titleLines: string[];
+};
+
 type ProjectBase = {
   slug: string;
   number: string;
@@ -8,14 +14,11 @@ type ProjectBase = {
   category: string;
   description: string;
   tags: string[];
+  cover?: ProjectCover;
 };
 
-export type ConceptProject = ProjectBase & {
-  kind: "concept";
-  visual: "workspace" | "mobile";
-  premise: string;
-  rationale: string;
-  flow: string[];
+export type UpcomingProject = ProjectBase & {
+  kind: "upcoming";
 };
 
 export type CaseStudyProject = ProjectBase & {
@@ -23,9 +26,9 @@ export type CaseStudyProject = ProjectBase & {
   article: SourceCaseStudy;
 };
 
-export type Project = ConceptProject | CaseStudyProject;
+export type Project = UpcomingProject | CaseStudyProject;
 
-// Documented case studies and illustrative concepts remain explicitly distinct.
+// Upcoming projects contain only supplied titles; article content can be added later.
 export const projects: Project[] = [
   {
     kind: "case-study",
@@ -38,45 +41,31 @@ export const projects: Project[] = [
     article: pickmeSearchRevamp,
   },
   {
-    kind: "concept",
-    slug: "clarity-at-scale",
+    kind: "upcoming",
+    slug: "seamless-payment-experience-at-the-table",
     number: "02",
-    title: "Clarity at scale.",
-    category: "SaaS & complex digital products",
-    description:
-      "An illustrative workspace that gives complex work room to breathe.",
-    visual: "workspace",
-    tags: ["PRODUCT DESIGN", "WEB EXPERIENCE"],
-    premise:
-      "Explore how a calm visual hierarchy could make a busy digital workspace easier to navigate.",
-    rationale:
-      "A persistent navigation rail, a clear primary action, and restrained use of color create an intentional starting point. This is a visual hypothesis, awaiting research and validation.",
-    flow: [
-      "Open workspace",
-      "Find a project",
-      "Review tasks",
-      "Choose the next action",
-    ],
+    title: "Seamless Payment Experience at the Table",
+    category: "Payments",
+    description: "Case study coming soon.",
+    tags: ["Payments"],
+    cover: {
+      wordmark: "Payments",
+      icon: "payment",
+      titleLines: ["Seamless Payment", "Experience at the Table"],
+    },
   },
   {
-    kind: "concept",
-    slug: "everyday-connected",
+    kind: "upcoming",
+    slug: "revamping-ingenii-fleet-tracker",
     number: "03",
-    title: "Everyday, connected.",
-    category: "Mobile applications & super apps",
-    description:
-      "An illustrative mobile experience for the little things that fill a day.",
-    visual: "mobile",
-    tags: ["MOBILE DESIGN", "SUPER APP"],
-    premise:
-      "Explore a shared entry point for everyday services without making every service compete for attention.",
-    rationale:
-      "Recognizable service icons, generous touch targets, and a short route from discovery to selection offer a starting direction. Usability and service priorities still need to be tested.",
-    flow: [
-      "Explore services",
-      "Choose a category",
-      "Review an option",
-      "Continue to the service",
-    ],
+    title: "Revamping Ingenii Fleet Tracker",
+    category: "Fleet Tracking",
+    description: "Case study coming soon.",
+    tags: ["Fleet Tracking"],
+    cover: {
+      wordmark: "Ingenii",
+      icon: "fleet",
+      titleLines: ["Revamping Ingenii", "Fleet Tracker"],
+    },
   },
 ];

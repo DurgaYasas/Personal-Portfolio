@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
-import { ProjectVisual } from "./project-visual";
 import { CaseStudyCover } from "./case-study-cover";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -10,22 +9,21 @@ export function ProjectCard({ project }: { project: Project }) {
       <Link
         href={`/work/${project.slug}`}
         className="project-link"
-        aria-label={`Explore ${project.title}${project.kind === "concept" ? " — illustrative concept" : " — case study"}`}
+        aria-label={`Explore ${project.title}${project.kind === "upcoming" ? " — case study coming soon" : " — case study"}`}
       >
         <div className="project-image-wrap">
-          {project.kind === "case-study" ? (
-            <CaseStudyCover title={project.title} tags={project.tags} />
-          ) : (
-            <ProjectVisual variant={project.visual} />
-          )}
+          <CaseStudyCover
+            title={project.title}
+            tags={project.tags}
+            cover={project.cover}
+            upcoming={project.kind === "upcoming"}
+          />
           <span className="project-open">
             <ArrowUpRight size={23} />
           </span>
-          <span className="concept-label">
-            {project.kind === "case-study"
-              ? "CASE STUDY"
-              : "ILLUSTRATIVE CONCEPT"}
-          </span>
+          {project.kind === "case-study" && (
+            <span className="concept-label">CASE STUDY</span>
+          )}
         </div>
         <div className="project-meta">
           <span>{project.category}</span>
