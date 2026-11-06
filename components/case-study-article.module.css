@@ -129,7 +129,9 @@
   line-height: 1.95;
   overflow-wrap: break-word;
 }
-.paragraph + .paragraph {
+.paragraph + .paragraph,
+.figure + .paragraph,
+.subsection + .paragraph {
   margin-top: 23px;
 }
 .challenge .paragraph {

@@ -1,4 +1,5 @@
 import { pickmeSearchRevamp } from "./case-studies/pickme-search-revamp";
+import { seamlessPaymentExperience } from "./case-studies/seamless-payment-experience-at-the-table";
 import type { SourceCaseStudy } from "./case-studies/types";
 
 export type ProjectCover = {
@@ -41,13 +42,14 @@ export const projects: Project[] = [
     article: pickmeSearchRevamp,
   },
   {
-    kind: "upcoming",
+    kind: "case-study",
     slug: "seamless-payment-experience-at-the-table",
     number: "02",
-    title: "Seamless Payment Experience at the Table",
+    title: seamlessPaymentExperience.title,
     category: "Payments",
-    description: "Case study coming soon.",
-    tags: ["Payments"],
+    description: seamlessPaymentExperience.subtitle,
+    tags: seamlessPaymentExperience.tags,
+    article: seamlessPaymentExperience,
     cover: {
       wordmark: "Payments",
       icon: "payment",

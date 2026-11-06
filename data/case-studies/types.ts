@@ -1,5 +1,5 @@
 export type ArticleBlock =
-  | { type: "paragraph"; text: string }
+  | { type: "paragraph"; text: string; emphasis?: string[] }
   | { type: "list"; items: string[] }
   | { type: "quotes"; items: { text: string; attribution?: string }[] }
   | { type: "stats"; items: { value: string; label: string }[] }
@@ -8,7 +8,8 @@ export type ArticleBlock =
       type: "figure";
       id: string;
       label?: string;
-      caption: string;
+      caption?: string;
+      sourceImage?: { url: string; width: number; height: number };
       image?: { src: string; alt: string; width: number; height: number };
     }
   | { type: "table"; headers: string[]; rows: string[][] }
@@ -23,9 +24,9 @@ export type ArticleBlock =
 export type SourceCaseStudy = {
   title: string;
   subtitle: string;
-  role: string;
-  period: string;
+  role?: string;
+  period?: string;
   tags: string[];
-  source: { fileName: string; pages: number };
+  source: { fileName: string; pages?: number; url?: string };
   sections: { id: string; title: string; blocks: ArticleBlock[] }[];
 };

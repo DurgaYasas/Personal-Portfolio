@@ -9,6 +9,24 @@ import { Navigation } from "./navigation";
 import { Reveal } from "./reveal";
 import styles from "./case-study-article.module.css";
 
+function ParagraphText({
+  text,
+  emphasis = [],
+}: {
+  text: string;
+  emphasis?: string[];
+}) {
+  if (emphasis.length === 0) return text;
+  const pattern = emphasis
+    .map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|");
+  return text
+    .split(new RegExp(`(${pattern})`, "g"))
+    .map((part, index) =>
+      emphasis.includes(part) ? <strong key={index}>{part}</strong> : part,
+    );
+}
+
 function ArticleBlocks({
   blocks,
   depth = 3,
@@ -23,7 +41,7 @@ function ArticleBlocks({
       case "paragraph":
         return (
           <p key={key} className={styles.paragraph}>
-            {block.text}
+            <ParagraphText text={block.text} emphasis={block.emphasis} />
           </p>
         );
       case "list":
@@ -77,10 +95,12 @@ function ArticleBlocks({
             className={styles.figure}
             data-figure-id={block.id}
           >
-            <figcaption>
-              {block.label && <span>{block.label}</span>}
-              {block.caption}
-            </figcaption>
+            {(block.caption || block.label) && (
+              <figcaption>
+                {block.label && <span>{block.label}</span>}
+                {block.caption}
+              </figcaption>
+            )}
             {block.image ? (
               <Image
                 className={styles.figureImage}
@@ -189,16 +209,19 @@ export function CaseStudyArticle({
             </div>
             <h1>{article.title}</h1>
             <p className={styles.subtitle}>{article.subtitle}</p>
-            <div className={styles.metadata}>
-              <span>{article.role}</span>
-              <span>{article.period}</span>
-            </div>
+            {(article.role || article.period) && (
+              <div className={styles.metadata}>
+                {article.role && <span>{article.role}</span>}
+                {article.period && <span>{article.period}</span>}
+              </div>
+            )}
           </Reveal>
           <Reveal>
             <div className={styles.cover}>
               <CaseStudyCover
                 title={article.title}
                 tags={article.tags}
+                cover={project.cover}
                 detail
               />
             </div>

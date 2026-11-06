@@ -35,6 +35,7 @@ No environment variables, API keys, or external services are required. Do not ru
 - `components/career-journey.tsx` and `components/skills-expertise.tsx`: the two sections immediately after the hero; `profile-motion.tsx` provides the scroll-driven timeline and one-time skill-bar fills. Their styles live in `profile-sections.module.css`.
 - `data/projects.ts`: typed project directions. Adding an entry generates another project route and homepage card.
 - `data/case-studies/`: structured, source-based articles. `pickme-search-revamp.ts` transcribes the supplied 16-page **Durga Yasas.pdf**.
+- `data/case-studies/seamless-payment-experience-at-the-table.ts`: the exact article wording from the supplied Carbonmade HTML export, with source image references for later asset replacement.
 - `components/case-study-article.tsx`: article renderer for text, quotations, statistics, solutions, tables, and replaceable image positions.
 - `components/upcoming-case-study.tsx`: a coming-soon page for projects whose articles have not been supplied. Their titles, icons, and cover line breaks are configured in `data/projects.ts`.
 
@@ -63,7 +64,11 @@ image: {
 
 Use the actual image dimensions and a meaningful description. The renderer replaces that image's placeholder automatically. Original project images will be supplied later; none have been synthesized or extracted as stand-in designs.
 
-The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**, using the user-supplied titles. All three homepage cards share the typographic cover style and appear in a single column. The new projects are marked coming soon, and their links open matching placeholder pages. No roles, research, outcomes, or project UI have been added for these two projects. To publish a supplied article, change its project entry from `upcoming` to `case-study` and attach a structured `article`.
+The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**. All three homepage cards share the typographic cover style and appear in a single column. The fleet project remains marked coming soon. To populate it when its article is supplied, change its project entry from `upcoming` to `case-study` and attach a structured `article`.
+
+**Seamless Payment Experience at the Table** transcribes the supplied **Seamless Payment Experience at the Table - Durga Yasas.html** export from the user's Carbonmade portfolio. All 107 non-empty article text fragments are retained in their original reading order across 15 sections. Original spelling, the repeated Wireframes heading, both value-impact sections, the research sample-size caveat, and the hypothetical test/KPI wording are preserved. Source line wrapping is reflowed for the web; navigation, site branding, and the copyright footer are excluded. No role or period is shown because neither is stated in the article.
+
+The HTML references 15 original images but the companion image folder was not attached, and the remote image host was inaccessible from this environment. Their positions and supplied captions remain as image placeholders; each figure's `sourceImage` stores the original URL and dimensions. Add local assets under `public/images/seamless-payment-experience-at-the-table/` and populate each figure's `image` field to display them. No replacement project UI has been synthesized.
 
 GitHub is linked using the supplied repository owner's public profile; confirm the preferred contact destination before publication. A resume PDF and email address have not been supplied.
 
