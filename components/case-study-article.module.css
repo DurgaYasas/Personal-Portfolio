@@ -131,6 +131,7 @@
 }
 .paragraph + .paragraph,
 .figure + .paragraph,
+.tableScroll + .paragraph,
 .subsection + .paragraph {
   margin-top: 23px;
 }
@@ -364,6 +365,54 @@ h4.subheading {
 .table tr > :last-child {
   color: var(--accent);
   font-weight: 650;
+}
+.comparisonTable {
+  min-width: 1120px;
+  table-layout: fixed;
+}
+.comparisonTable th,
+.comparisonTable td {
+  padding: 18px 16px;
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.comparisonTable tbody td {
+  white-space: normal;
+}
+.tableHint {
+  position: sticky;
+  left: 0;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+.comparisonTable tbody th {
+  width: auto;
+  font-weight: 650;
+  color: var(--ink);
+}
+.comparisonTable thead th:first-child,
+.comparisonTable tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface);
+  box-shadow: 1px 0 var(--line);
+}
+.comparisonTable thead th:first-child {
+  background: var(--accent-soft);
+}
+.comparisonTable tr > :last-child {
+  color: var(--muted);
+  font-weight: 450;
+}
+.comparisonTable thead tr > :last-child {
+  color: var(--ink-soft);
+  font-weight: 550;
 }
 .backToProjects {
   display: flex;

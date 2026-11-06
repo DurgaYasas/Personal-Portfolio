@@ -12,7 +12,14 @@ export type ArticleBlock =
       sourceImage?: { url: string; width: number; height: number };
       image?: { src: string; alt: string; width: number; height: number };
     }
-  | { type: "table"; headers: string[]; rows: string[][] }
+  | {
+      type: "table";
+      id?: string;
+      caption?: string;
+      variant?: "comparison";
+      headers: string[];
+      rows: string[][];
+    }
   | {
       type: "subsection";
       id: string;

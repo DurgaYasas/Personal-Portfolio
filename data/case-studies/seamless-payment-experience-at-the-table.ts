@@ -1,7 +1,7 @@
 import type { SourceCaseStudy } from "./types";
 
 // Transcribed from the supplied Carbonmade HTML export. Preserve the source wording.
-// Original image files were not attached; source references retain their positions.
+// The competitor table was supplied separately; other source image positions remain.
 // Role and period are omitted because the source does not state them.
 export const seamlessPaymentExperience: SourceCaseStudy = {
   title: "Seamless Payment Experience at the Table",
@@ -42,13 +42,72 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
           title: "Competitor benchmarking:",
           blocks: [
             {
-              type: "figure",
+              type: "table",
               id: "competitor-benchmarking",
-              sourceImage: {
-                url: "https://carbon-media.accelerator.net/0000000mwIt/0fTrULIyVgXcWLMZh3ry9w;1920x771.png?auto=webp",
-                width: 1920,
-                height: 771,
-              },
+              caption: "Competitor benchmarking",
+              variant: "comparison",
+              headers: [
+                "App / Service",
+                "Region",
+                "QR Payment",
+                "Bill Splitting",
+                "Tipping",
+                "Trust & Security",
+                "Cultural Adaptation",
+                "Notes",
+              ],
+              rows: [
+                [
+                  "ToastTab",
+                  "USA",
+                  "✅",
+                  "✅ (by seat/item)",
+                  "✅ (percentages)",
+                  "Strong (POS-integrated)",
+                  "❌ (US-focused)",
+                  "Business-first UX",
+                ],
+                [
+                  "Sunday App",
+                  "USA / Europe",
+                  "✅",
+                  "✅ (equal)",
+                  "✅ (percentages)",
+                  "High (wallets supported)",
+                  "❌",
+                  "Polished, diner-focused",
+                ],
+                [
+                  "PayPay",
+                  "Japan",
+                  "✅",
+                  "❌",
+                  "❌ (no tipping)",
+                  "Very strong (trusted wallet)",
+                  "✅ (Japan norms)",
+                  "Super popular in Japan",
+                ],
+                [
+                  "FavePay",
+                  "Singapore / SE Asia",
+                  "✅",
+                  "❌",
+                  "❌",
+                  "Medium (wallet loyalty)",
+                  "❌",
+                  "Cashback focus",
+                ],
+                [
+                  "Zomato Pay",
+                  "India / Middle East",
+                  "✅",
+                  "✅",
+                  "✅ (As percentages)",
+                  "Medium (requires Zomato app)",
+                  "Partial (India/ME norms)",
+                  "Part of dining ecosystem",
+                ],
+              ],
             },
             {
               type: "paragraph",

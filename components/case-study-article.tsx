@@ -122,13 +122,33 @@ function ArticleBlocks({
         return (
           <div
             key={key}
+            id={block.id}
             className={styles.tableScroll}
             role="region"
-            aria-label="Analytics & KPIs: before and after revamp"
+            aria-label={
+              block.caption ?? "Analytics & KPIs: before and after revamp"
+            }
+            aria-describedby={
+              block.variant === "comparison" && block.id
+                ? `${block.id}-hint`
+                : undefined
+            }
             tabIndex={0}
           >
-            <table className={styles.table}>
-              <caption className="sr-only">Analytics & KPIs</caption>
+            {block.variant === "comparison" && (
+              <div
+                id={block.id ? `${block.id}-hint` : undefined}
+                className={styles.tableHint}
+              >
+                Scroll horizontally to compare all columns.
+              </div>
+            )}
+            <table
+              className={`${styles.table} ${block.variant === "comparison" ? styles.comparisonTable : ""}`}
+            >
+              <caption className="sr-only">
+                {block.caption ?? "Analytics & KPIs"}
+              </caption>
               <thead>
                 <tr>
                   {block.headers.map((header) => (
@@ -147,7 +167,9 @@ function ArticleBlocks({
                           {cell}
                         </th>
                       ) : (
-                        <td key={cellIndex}>{cell}</td>
+                        <td key={cellIndex}>
+                          <TableCell text={cell} />
+                        </td>
                       ),
                     )}
                   </tr>
@@ -177,6 +199,22 @@ function ArticleBlocks({
         );
     }
   });
+}
+
+function TableCell({ text }: { text: string }) {
+  const status = text.match(/^(✅|❌)/)?.[0];
+  if (!status) return text;
+  return (
+    <>
+      <span
+        role="img"
+        aria-label={status === "✅" ? "Supported" : "Not supported"}
+      >
+        {status}
+      </span>
+      {text.slice(status.length)}
+    </>
+  );
 }
 
 export function CaseStudyArticle({
