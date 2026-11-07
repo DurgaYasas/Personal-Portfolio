@@ -414,6 +414,43 @@ h4.subheading {
   color: var(--ink-soft);
   font-weight: 550;
 }
+.researchTable {
+  min-width: 0;
+  table-layout: fixed;
+}
+.researchTable th,
+.researchTable td {
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+.researchTable th:first-child {
+  width: 34%;
+}
+.researchTable tbody th {
+  width: 34%;
+  color: var(--ink);
+  font-weight: 600;
+}
+.researchTable tbody td {
+  white-space: normal;
+}
+.researchTable tbody tr:nth-child(odd) {
+  background: var(--surface);
+}
+.researchTable tr > :last-child {
+  color: var(--muted);
+  font-weight: 450;
+}
+.researchTable thead tr > :last-child {
+  color: var(--ink-soft);
+  font-weight: 550;
+}
+@media (max-width: 760px) {
+  .researchTable th,
+  .researchTable td {
+    padding: 14px 12px;
+  }
+}
 .backToProjects {
   display: flex;
   justify-content: space-between;

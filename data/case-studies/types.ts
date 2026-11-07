@@ -16,7 +16,7 @@ export type ArticleBlock =
       type: "table";
       id?: string;
       caption?: string;
-      variant?: "comparison";
+      variant?: "comparison" | "research";
       headers: string[];
       rows: string[][];
     }

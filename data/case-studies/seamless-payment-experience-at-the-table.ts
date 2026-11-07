@@ -1,7 +1,7 @@
 import type { SourceCaseStudy } from "./types";
 
 // Transcribed from the supplied Carbonmade HTML export. Preserve the source wording.
-// The competitor table was supplied separately; other source image positions remain.
+// Research tables were supplied separately; other source image positions remain.
 // Role and period are omitted because the source does not state them.
 export const seamlessPaymentExperience: SourceCaseStudy = {
   title: "Seamless Payment Experience at the Table",
@@ -122,13 +122,38 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
           emphasis: ["User Research:"],
         },
         {
-          type: "figure",
+          type: "table",
           id: "user-research",
-          sourceImage: {
-            url: "https://carbon-media.accelerator.net/0000000mwIt/lbO7xBpaK0JcQOZUVelQ1s;1920x828.png?auto=webp",
-            width: 1920,
-            height: 828,
-          },
+          caption: "User Research findings",
+          variant: "research",
+          headers: ["Theme", "Finding"],
+          rows: [
+            [
+              "Preferred payment method",
+              "4 of 6 preferred mobile wallet; 2 of 6 preferred card",
+            ],
+            [
+              "Frequency of bill splitting",
+              "3 of 6 split sometimes; 2 of 6 often; 1 of 6 rarely",
+            ],
+            [
+              "Preferred split method",
+              "3 of 6 wanted itemized; 2 of 6 equal split; 1 of 6 custom",
+            ],
+            [
+              "Tipping culture",
+              "4 of 6 expected tipping; 1 of 6 optional; 1 of 6 no-tip norm",
+            ],
+            [
+              "Preferred tipping method",
+              "3 of 6 preferred percentage presets; 2 of 6 custom; 1 of 6 no tip",
+            ],
+            ["Would download a dedicated app to pay", "Only 1 of 6"],
+            [
+              "Prior QR payment experience",
+              "4 of 6 had used QR payment before",
+            ],
+          ],
         },
         {
           type: "subsection",

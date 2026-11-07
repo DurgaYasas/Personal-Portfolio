@@ -9,6 +9,11 @@ import { Navigation } from "./navigation";
 import { Reveal } from "./reveal";
 import styles from "./case-study-article.module.css";
 
+const tableStyles = {
+  comparison: styles.comparisonTable,
+  research: styles.researchTable,
+};
+
 function ParagraphText({
   text,
   emphasis = [],
@@ -144,7 +149,7 @@ function ArticleBlocks({
               </div>
             )}
             <table
-              className={`${styles.table} ${block.variant === "comparison" ? styles.comparisonTable : ""}`}
+              className={`${styles.table} ${block.variant ? tableStyles[block.variant] : ""}`}
             >
               <caption className="sr-only">
                 {block.caption ?? "Analytics & KPIs"}
