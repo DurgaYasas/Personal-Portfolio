@@ -61,11 +61,17 @@ function ArticleBlocks({
         return (
           <div key={key} className={styles.quotes}>
             {block.items.map((item) => (
-              <figure key={item.text} className={styles.quote}>
-                {item.attribution && (
+              <figure
+                key={item.text}
+                className={`${styles.quote} ${block.variant === "featured" ? styles.featuredQuote : ""}`}
+              >
+                {item.attribution && block.variant !== "featured" && (
                   <figcaption>{item.attribution}</figcaption>
                 )}
                 <blockquote>{item.text}</blockquote>
+                {item.attribution && block.variant === "featured" && (
+                  <figcaption>{item.attribution}</figcaption>
+                )}
               </figure>
             ))}
           </div>

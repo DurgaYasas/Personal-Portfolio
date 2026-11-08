@@ -1,7 +1,11 @@
 export type ArticleBlock =
   | { type: "paragraph"; text: string; emphasis?: string[] }
   | { type: "list"; items: string[] }
-  | { type: "quotes"; items: { text: string; attribution?: string }[] }
+  | {
+      type: "quotes";
+      variant?: "featured";
+      items: { text: string; attribution?: string }[];
+    }
   | { type: "stats"; items: { value: string; label: string }[] }
   | { type: "cards"; items: { title: string; text: string }[] }
   | {

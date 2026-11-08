@@ -178,12 +178,15 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
           blocks: [
             {
               type: "quotes",
+              variant: "featured",
               items: [
                 {
-                  text: "“I don’t want to download an app just to pay once.” — Middle East, 29",
+                  text: "“I don’t want to download an app just to pay once.”",
+                  attribution: "— Middle East, 29",
                 },
                 {
-                  text: "“Tipping isn’t common here — it can feel rude.” — Japan, 34",
+                  text: "“Tipping isn’t common here — it can feel rude.”",
+                  attribution: "— Japan, 34",
                 },
               ],
             },

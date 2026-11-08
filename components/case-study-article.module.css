@@ -221,6 +221,22 @@ h4.subheading {
   font-size: 14px;
   line-height: 1.9;
 }
+.featuredQuote blockquote {
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.6;
+}
+.featuredQuote figcaption {
+  display: block;
+  margin: 12px 0 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 1.6;
+}
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
