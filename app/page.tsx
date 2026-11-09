@@ -5,6 +5,7 @@ import {
   MoveUpRight,
 } from "lucide-react";
 import { Hero } from "@/components/hero";
+import { MyExperience } from "@/components/my-experience";
 import { CareerJourney } from "@/components/career-journey";
 import { SkillsExpertise } from "@/components/skills-expertise";
 import { Navigation } from "@/components/navigation";
@@ -34,6 +35,7 @@ export default function Home() {
       <Navigation home workCount={projects.length} />
       <main id="main">
         <Hero />
+        <MyExperience />
         <CareerJourney />
         <SkillsExpertise />
 

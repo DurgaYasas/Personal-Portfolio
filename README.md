@@ -32,6 +32,8 @@ No environment variables, API keys, or external services are required. Do not ru
 - `components/hero.tsx` and `components/hero.module.css`: the dark, centered hero based on the supplied reference.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
+- `data/experience.ts`: country locations, confirmed project descriptions, case-study links, and optional original logo paths for the interactive My experience map.
+- `components/my-experience.tsx`, `experience-map.tsx`, and `my-experience.module.css`: the section between the hero and career journey. `experience-world-map.tsx` renders the locally bundled Natural Earth country outlines on the server; see `data/maps/README.md` for provenance.
 - `components/career-journey.tsx` and `components/skills-expertise.tsx`: the two sections immediately after the hero; `profile-motion.tsx` provides the scroll-driven timeline and one-time skill-bar fills. Their styles live in `profile-sections.module.css`.
 - `data/projects.ts`: typed project directions. Adding an entry generates another project route and homepage card.
 - `data/case-studies/`: structured, source-based articles. `pickme-search-revamp.ts` transcribes the supplied 16-page **Durga Yasas.pdf**.
@@ -42,6 +44,22 @@ No environment variables, API keys, or external services are required. Do not ru
 ## Color palette
 
 The theme uses the supplied Obsidian `#0B0B0B`, Warm Ivory `#ECE8E0`, Burnt Saffron `#C77A2B`, Bronze Sand `#B08A4A`, and Stone Grey `#3F4548`. The five source swatches and semantic tokens are defined in `app/globals.css`; card surfaces, muted text, and hover states are derived from those swatches. Components, skill/career accents, project illustrations, and case-study pages share these tokens. Saffron buttons use obsidian labels for contrast. The standalone favicon uses the same obsidian and saffron swatches.
+
+## My experience map
+
+The map selects Sri Lanka initially. Country controls, geographic markers, and the available country outlines respond to mouse hover; native buttons also support keyboard focus, Enter/Space, and touch. Selection persists while the project panel is being read or its links are used. Small screens can pan the map, and choosing a country brings its marker into view without scrolling the page. A polite live region announces the selected country and project details. Reduced-motion mode disables the component's transitions.
+
+| Data property                            | Default / values                            | Purpose                                                     |
+| ---------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
+| Country `id`, `name`, `shortName`, `iso` | Four configured countries                   | Identity, visible labels, and country-outline matching      |
+| `longitude`, `latitude`                  | Geographic coordinates                      | Marker position in the map's equirectangular projection     |
+| `labelPosition`                          | `north`, `southWest`, `southEast`           | Keeps neighboring map labels apart                          |
+| `projects`                               | An array; empty shows a coming-soon message | Project cards for the selected country                      |
+| Project `brand`, `name`, `description`   | Supplied project content                    | Short wordmark fallback, title, and summary                 |
+| Project `href`                           | Optional                                    | Enables a case-study link only where one exists             |
+| Project `logo`                           | Optional `{ src, alt }`                     | Displays original logo artwork instead of the text wordmark |
+
+Confirmed entries currently link PickMe Search Revamp to Sri Lanka and du Mobile via Arimac to the UAE. The Singapore and USA project lists await the owner's confirmation; no clients, locations, results, or roles have been inferred for them. Original logos were not supplied, so the current badges are text wordmarks. Add original assets under `public/images/logos/` and set each project's `logo`, for example `{ src: "/images/logos/pickme.svg", alt: "PickMe" }`. The map requires no API key, map SDK, geolocation permission, or external runtime requests.
 
 ## Content status
 
