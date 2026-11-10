@@ -119,6 +119,10 @@ function ArticleBlocks({
                 alt={block.image.alt}
                 width={block.image.width}
                 height={block.image.height}
+                style={{
+                  maxWidth: block.image.width,
+                  backgroundColor: block.image.background,
+                }}
                 sizes="(max-width: 760px) 100vw, 900px"
               />
             ) : (
@@ -267,12 +271,24 @@ export function CaseStudyArticle({
           </Reveal>
           <Reveal>
             <div className={styles.cover}>
-              <CaseStudyCover
-                title={article.title}
-                tags={article.tags}
-                cover={project.cover}
-                detail
-              />
+              {article.heroImage ? (
+                <Image
+                  className={styles.figureImage}
+                  src={article.heroImage.src}
+                  alt={article.heroImage.alt}
+                  width={article.heroImage.width}
+                  height={article.heroImage.height}
+                  style={{ backgroundColor: article.heroImage.background }}
+                  sizes="(max-width: 760px) 100vw, 1320px"
+                />
+              ) : (
+                <CaseStudyCover
+                  title={article.title}
+                  tags={article.tags}
+                  cover={project.cover}
+                  detail
+                />
+              )}
             </div>
           </Reveal>
         </header>

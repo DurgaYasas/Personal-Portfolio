@@ -1,5 +1,6 @@
 import { pickmeSearchRevamp } from "./case-studies/pickme-search-revamp";
 import { seamlessPaymentExperience } from "./case-studies/seamless-payment-experience-at-the-table";
+import { ingeniiFleetTracker } from "./case-studies/revamping-ingenii-fleet-tracker";
 import type { SourceCaseStudy } from "./case-studies/types";
 
 export type ProjectCover = {
@@ -57,13 +58,14 @@ export const projects: Project[] = [
     },
   },
   {
-    kind: "upcoming",
+    kind: "case-study",
     slug: "revamping-ingenii-fleet-tracker",
     number: "03",
-    title: "Revamping Ingenii Fleet Tracker",
+    title: ingeniiFleetTracker.title,
     category: "Fleet Tracking",
-    description: "Case study coming soon.",
-    tags: ["Fleet Tracking"],
+    description: ingeniiFleetTracker.subtitle,
+    tags: ingeniiFleetTracker.tags,
+    article: ingeniiFleetTracker,
     cover: {
       wordmark: "Ingenii",
       icon: "fleet",

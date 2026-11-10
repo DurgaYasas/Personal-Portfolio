@@ -1,3 +1,11 @@
+export type CaseStudyImage = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  background?: "white";
+};
+
 export type ArticleBlock =
   | { type: "paragraph"; text: string; emphasis?: string[] }
   | { type: "list"; items: string[] }
@@ -14,7 +22,7 @@ export type ArticleBlock =
       label?: string;
       caption?: string;
       sourceImage?: { url: string; width: number; height: number };
-      image?: { src: string; alt: string; width: number; height: number };
+      image?: CaseStudyImage;
     }
   | {
       type: "table";
@@ -38,6 +46,7 @@ export type SourceCaseStudy = {
   role?: string;
   period?: string;
   tags: string[];
+  heroImage?: CaseStudyImage;
   source: { fileName: string; pages?: number; url?: string };
   sections: { id: string; title: string; blocks: ArticleBlock[] }[];
 };
