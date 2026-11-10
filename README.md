@@ -29,6 +29,7 @@ No environment variables, API keys, or external services are required. Do not ru
 - `app/work/[slug]/page.tsx`: statically generated case-study template and metadata.
 - `app/globals.css`: responsive visual system and illustrative product surfaces, alongside Tailwind.
 - `components/`: navigation, scroll reveals, cards, UI illustrations, and footer.
+- `components/project-thumbnail.tsx` and its CSS module: responsive homepage artwork, editorial feature copy, source labels, and hover/focus motion. Each project's `thumbnail` in `data/projects.ts` configures its artwork, headline, and detail line independently from the article cover.
 - `components/hero.tsx` and `components/hero.module.css`: the dark, centered hero based on the supplied reference.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
@@ -70,7 +71,7 @@ The supplied portrait is visible in chat but its original image file was not ava
 
 **PickMe Search Revamp** uses the exact article wording from the supplied case-study PDF, including the role and period, interview quotations, research and testing percentages, solution descriptions, KPI definitions and before/after values, and reflections. Browser print dates, repeated page headers, URLs, and page counters are excluded. Line wrapping and page breaks are reflowed for the web; compound-word hyphens are preserved. The PDF is a case study, not a resume, and is not connected to the resume download button.
 
-The PickMe homepage thumbnail is a typographic cover rather than a reproduction of app UI. The article has 11 image positions with their original captions. When original images arrive, add them under `public/images/pickme-search-revamp/` and set the corresponding figure block's `image` field:
+The PickMe homepage thumbnail uses an illustrative food-search cover, explicitly labeled as illustrative rather than original app UI. The article has 11 image positions with their original captions. When original images arrive, add them under `public/images/pickme-search-revamp/` and set the corresponding figure block's `image` field:
 
 ```ts
 image: {
@@ -81,9 +82,11 @@ image: {
 }
 ```
 
-Use the actual image dimensions and a meaningful description. The renderer replaces that image's placeholder automatically. Original project images will be supplied later; none have been synthesized or extracted as stand-in designs.
+Use the actual image dimensions and a meaningful description. The renderer replaces that image's placeholder automatically. Original PickMe article images will be supplied later; the article's figure positions remain placeholders.
 
-The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**. All three homepage cards share the typographic cover style and appear in a single column. Each now links to its supplied case study. The `upcoming` project type remains available for future titles whose articles have not yet been supplied.
+The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**. All three homepage cards use coordinated image-led covers and appear in a single column. Each links to its supplied case study. The `upcoming` project type remains available for future titles whose articles have not yet been supplied.
+
+Homepage thumbnail artwork for PickMe and table payments is generated illustration stored under `public/images/thumbnails/`. It depicts grouped food-search results and QR-based bill splitting/tipping respectively; the example UI and imagery are not original shipped product screens. Both covers display an Illustrative cover label, also conveyed in their accessible link names. The Ingenii thumbnail uses the actual original cover image from the supplied PDF, displayed in a CSS frame and labeled Original project UI. Article text, image galleries, and article headers remain separate from these homepage thumbnail settings.
 
 **Seamless Payment Experience at the Table** transcribes the supplied **Seamless Payment Experience at the Table - Durga Yasas.html** export from the user's Carbonmade portfolio. All 107 non-empty article text fragments are retained in their original reading order across 15 sections. Original spelling, the repeated Wireframes heading, both value-impact sections, the research sample-size caveat, and the hypothetical test/KPI wording are preserved. Source line wrapping is reflowed for the web; navigation, site branding, and the copyright footer are excluded. No role or period is shown because neither is stated in the article.
 
@@ -91,7 +94,7 @@ The HTML references 15 original images but the companion image folder was not at
 
 **Revamping Ingenii Fleet Tracker** uses the supplied PDF's title, subtitle, original text, and section order across 13 sections. All 109 authored text fragments match the extracted PDF, with no source words omitted. The eight interview questions/answers, two personas, usability-testing feedback, captions, repeated statements, and original spelling are preserved. Browser print headers, page counters, site navigation, and the copyright footer are excluded. The article does not state a role or project period, so neither is added.
 
-The Ingenii page includes its original hero image and 34 article images extracted directly from the PDF at native resolution. Images repeated by print pagination are stored once as complete assets; PDF transparency masks are retained. The optional `heroImage` field displays the original cover while the homepage keeps its typographic thumbnail. Source image backgrounds use `background: "white"` to match the PDF's paper and keep transparent artwork legible. Small images retain their native width. The PDF provides static frames rather than playable animations, so no animation or video has been recreated.
+The Ingenii page includes its original hero image and 34 article images extracted directly from the PDF at native resolution. Images repeated by print pagination are stored once as complete assets; PDF transparency masks are retained. The optional `heroImage` field displays the original cover in the article; its homepage thumbnail has an independent composition using the same original asset. Source image backgrounds use `background: "white"` to match the PDF's paper and keep transparent artwork legible. Small images retain their native width. The PDF provides static frames rather than playable animations, so no animation or video has been recreated.
 
 GitHub is linked using the supplied repository owner's public profile; confirm the preferred contact destination before publication. A resume PDF and email address have not been supplied.
 

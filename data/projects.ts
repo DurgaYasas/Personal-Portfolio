@@ -1,7 +1,14 @@
 import { pickmeSearchRevamp } from "./case-studies/pickme-search-revamp";
 import { seamlessPaymentExperience } from "./case-studies/seamless-payment-experience-at-the-table";
 import { ingeniiFleetTracker } from "./case-studies/revamping-ingenii-fleet-tracker";
-import type { SourceCaseStudy } from "./case-studies/types";
+import type { CaseStudyImage, SourceCaseStudy } from "./case-studies/types";
+
+export type ProjectThumbnailConfig = {
+  variant: "illustration" | "interface";
+  image: CaseStudyImage;
+  headline: string[];
+  detail: string;
+};
 
 export type ProjectCover = {
   wordmark: string;
@@ -17,6 +24,7 @@ type ProjectBase = {
   description: string;
   tags: string[];
   cover?: ProjectCover;
+  thumbnail?: ProjectThumbnailConfig;
 };
 
 export type UpcomingProject = ProjectBase & {
@@ -41,6 +49,17 @@ export const projects: Project[] = [
     description: pickmeSearchRevamp.subtitle,
     tags: pickmeSearchRevamp.tags,
     article: pickmeSearchRevamp,
+    thumbnail: {
+      variant: "illustration",
+      image: {
+        src: "/images/thumbnails/pickme-search.png",
+        alt: "Illustrative food-search screens showing grouped outlet and dish results",
+        width: 1935,
+        height: 813,
+      },
+      headline: ["Find your", "next craving."],
+      detail: "Food search & discovery",
+    },
   },
   {
     kind: "case-study",
@@ -51,6 +70,17 @@ export const projects: Project[] = [
     description: seamlessPaymentExperience.subtitle,
     tags: seamlessPaymentExperience.tags,
     article: seamlessPaymentExperience,
+    thumbnail: {
+      variant: "illustration",
+      image: {
+        src: "/images/thumbnails/table-payments.png",
+        alt: "Illustrative restaurant payment screens with a QR code, bill splitting and tipping options",
+        width: 1938,
+        height: 811,
+      },
+      headline: ["Scan. Split.", "Settle."],
+      detail: "QR payments & flexible bill splitting",
+    },
     cover: {
       wordmark: "Payments",
       icon: "payment",
@@ -66,6 +96,17 @@ export const projects: Project[] = [
     description: ingeniiFleetTracker.subtitle,
     tags: ingeniiFleetTracker.tags,
     article: ingeniiFleetTracker,
+    thumbnail: {
+      variant: "interface",
+      image: {
+        src: "/images/ingenii-fleet-tracker/cover.png",
+        alt: "Original Ingenii fleet tracking interface with vehicle lists, location maps and tracking widgets",
+        width: 1920,
+        height: 1048,
+      },
+      headline: ["Clarity,", "in motion."],
+      detail: "Fleet tracking & vehicle insights",
+    },
     cover: {
       wordmark: "Ingenii",
       icon: "fleet",
