@@ -15,22 +15,25 @@
   --bronze-sand: #b08a4a;
   --stone-grey: #3f4548;
 
-  --paper: var(--obsidian);
-  --ink: var(--warm-ivory);
-  --accent: var(--burnt-saffron);
-  --accent-secondary: var(--bronze-sand);
-  --muted: color-mix(in srgb, var(--warm-ivory) 70%, var(--stone-grey));
-  --ink-soft: color-mix(in srgb, var(--warm-ivory) 85%, var(--stone-grey));
-  --line: var(--stone-grey);
-  --surface: color-mix(in srgb, var(--stone-grey) 18%, var(--obsidian));
-  --surface-raised: color-mix(in srgb, var(--stone-grey) 35%, var(--obsidian));
-  --accent-soft: color-mix(in srgb, var(--burnt-saffron) 12%, var(--obsidian));
-  --accent-line: color-mix(in srgb, var(--bronze-sand) 50%, var(--stone-grey));
-  --accent-hover: color-mix(
-    in srgb,
-    var(--burnt-saffron) 70%,
-    var(--warm-ivory)
-  );
+  --paper: var(--warm-ivory);
+  --ink: var(--obsidian);
+  /* Text accents use deeper palette mixes for contrast on light surfaces. */
+  --accent: color-mix(in srgb, var(--burnt-saffron) 64%, var(--obsidian));
+  --accent-secondary: color-mix(in srgb, var(--bronze-sand) 65%, var(--obsidian));
+  --accent-hover: color-mix(in srgb, var(--burnt-saffron) 52%, var(--obsidian));
+  --muted: var(--stone-grey);
+  --ink-soft: color-mix(in srgb, var(--stone-grey) 80%, var(--obsidian));
+  --line: color-mix(in srgb, var(--stone-grey) 23%, var(--warm-ivory));
+  --surface: color-mix(in srgb, var(--warm-ivory) 45%, white);
+  --surface-raised: color-mix(in srgb, var(--warm-ivory) 65%, white);
+  --accent-soft: color-mix(in srgb, var(--bronze-sand) 14%, var(--paper));
+  --accent-line: color-mix(in srgb, var(--bronze-sand) 65%, var(--paper));
+  --action-bg: var(--burnt-saffron);
+  --action-hover: color-mix(in srgb, var(--burnt-saffron) 85%, var(--warm-ivory));
+  --action-ink: var(--obsidian);
+  --map-land: color-mix(in srgb, var(--stone-grey) 12%, var(--paper));
+  --shadow-soft: color-mix(in srgb, var(--obsidian) 8%, transparent);
+  --shadow-raised: color-mix(in srgb, var(--obsidian) 12%, transparent);
   --illustration-paper: var(--warm-ivory);
   --illustration-panel: color-mix(
     in srgb,
@@ -47,7 +50,7 @@
     var(--stone-grey) 25%,
     var(--warm-ivory)
   );
-  color-scheme: dark;
+  color-scheme: light;
 }
 * {
   box-sizing: border-box;
@@ -181,9 +184,9 @@ p {
   margin-left: 4px;
 }
 .desktop-nav .nav-contact:hover {
-  background: var(--accent);
-  color: var(--paper);
-  border-color: var(--accent);
+  background: var(--action-bg);
+  color: var(--action-ink);
+  border-color: var(--action-bg);
 }
 .menu-toggle {
   display: none;
@@ -272,7 +275,7 @@ p {
   transition:
     opacity 0.2s,
     transform 0.2s;
-  color: var(--paper);
+  color: var(--obsidian);
 }
 .project-link:hover .project-open,
 .project-link:focus-visible .project-open {
@@ -1130,8 +1133,7 @@ p {
 .contact-arrow {
   width: 108px;
   height: 108px;
-  background: var(--accent);
-  color: var(--ink);
+  background: var(--action-bg);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1139,7 +1141,7 @@ p {
   transition:
     transform 0.25s,
     background 0.25s;
-  color: var(--paper);
+  color: var(--action-ink);
 }
 .contact-arrow > svg {
   width: 53px;
@@ -1147,7 +1149,7 @@ p {
 }
 .contact-arrow:hover {
   transform: rotate(45deg);
-  background: var(--accent-hover);
+  background: var(--action-hover);
 }
 .contact-links {
   display: flex;
@@ -1802,7 +1804,7 @@ p {
     top: 81px;
     background: var(--paper);
     padding: 16px 20px 24px;
-    box-shadow: 0 18px 30px color-mix(in srgb, var(--obsidian) 55%, transparent);
+    box-shadow: 0 18px 30px var(--shadow-raised);
     border-bottom: 1px solid var(--line);
   }
   .mobile-menu a {
@@ -1866,7 +1868,7 @@ p {
     height: 34px;
     top: 13px;
     right: 13px;
-    color: var(--paper);
+    color: var(--obsidian);
   }
   .project-open > svg {
     width: 18px;
@@ -2057,7 +2059,7 @@ p {
     width: 64px;
     margin-right: 0;
     flex-shrink: 0;
-    color: var(--paper);
+    color: var(--action-ink);
   }
   .contact-arrow > svg {
     width: 34px;
@@ -2411,7 +2413,7 @@ p {
   .contact-arrow {
     height: 54px;
     width: 54px;
-    color: var(--paper);
+    color: var(--action-ink);
   }
 }
 @media (prefers-reduced-motion: reduce) {

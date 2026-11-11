@@ -118,12 +118,12 @@
 }
 
 .primaryAction {
-  color: var(--obsidian);
-  background: var(--accent);
+  color: var(--action-ink);
+  background: var(--action-bg);
 }
 
 .primaryAction:hover {
-  background: var(--accent-hover);
+  background: var(--action-hover);
   transform: translateY(-2px);
 }
 

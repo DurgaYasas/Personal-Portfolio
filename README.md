@@ -30,7 +30,7 @@ No environment variables, API keys, or external services are required. Do not ru
 - `app/globals.css`: responsive visual system and illustrative product surfaces, alongside Tailwind.
 - `components/`: navigation, scroll reveals, cards, UI illustrations, and footer.
 - `components/project-thumbnail.tsx` and its CSS module: responsive homepage artwork, editorial feature copy, source labels, and hover/focus motion. Each project's `thumbnail` in `data/projects.ts` configures its artwork, headline, and detail line independently from the article cover.
-- `components/hero.tsx` and `components/hero.module.css`: the dark, centered hero based on the supplied reference.
+- `components/hero.tsx` and `components/hero.module.css`: the centered hero based on the supplied reference, using the shared light theme.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
 - `data/experience.ts`: country locations, confirmed project descriptions, case-study links, and optional original logo paths for the interactive My experience map.
@@ -45,7 +45,7 @@ No environment variables, API keys, or external services are required. Do not ru
 
 ## Color palette
 
-The theme uses the supplied Obsidian `#0B0B0B`, Warm Ivory `#ECE8E0`, Burnt Saffron `#C77A2B`, Bronze Sand `#B08A4A`, and Stone Grey `#3F4548`. The five source swatches and semantic tokens are defined in `app/globals.css`; card surfaces, muted text, and hover states are derived from those swatches. Components, skill/career accents, project illustrations, and case-study pages share these tokens. Saffron buttons use obsidian labels for contrast. The standalone favicon uses the same obsidian and saffron swatches.
+The site uses a light theme with Warm Ivory `#ECE8E0` backgrounds, Obsidian `#0B0B0B` headings, Stone Grey `#3F4548` body text, and pale card surfaces mixed with white. Burnt Saffron `#C77A2B` and Bronze Sand `#B08A4A` remain the accent swatches. Semantic tokens in `app/globals.css` derive deeper accent text colors for contrast on light backgrounds, while filled saffron buttons retain obsidian labels through separate action tokens. Components, career/skill accents, map surfaces, and all case-study pages share these tokens. Thumbnail text panels use light surfaces; the illustrative image files and original project images retain their source colors. Shadows are soft neutral tints. The favicon uses an ivory background with dark initials and a saffron dot.
 
 ## My experience map
 
