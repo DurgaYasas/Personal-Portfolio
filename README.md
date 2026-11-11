@@ -45,7 +45,20 @@ No environment variables, API keys, or external services are required. Do not ru
 
 ## Color palette
 
-The site uses a light theme with Warm Ivory `#ECE8E0` backgrounds, Obsidian `#0B0B0B` headings, Stone Grey `#3F4548` body text, and pale card surfaces mixed with white. Burnt Saffron `#C77A2B` and Bronze Sand `#B08A4A` remain the accent swatches. Semantic tokens in `app/globals.css` derive deeper accent text colors for contrast on light backgrounds, while filled saffron buttons retain obsidian labels through separate action tokens. Components, career/skill accents, map surfaces, and all case-study pages share these tokens. Thumbnail text panels use light surfaces; the illustrative image files and original project images retain their source colors. Shadows are soft neutral tints. The favicon uses an ivory background with dark initials and a saffron dot.
+The site uses a light theme with Warm Ivory `#ECE8E0` backgrounds, Obsidian `#0B0B0B` headings, dark charcoal body copy, Stone Grey `#3F4548` secondary labels, and pale card surfaces mixed with white. Burnt Saffron `#C77A2B` and Bronze Sand `#B08A4A` remain the accent swatches. Semantic tokens in `app/globals.css` derive deeper accent text colors for contrast on light backgrounds, while filled saffron buttons retain obsidian labels through separate action tokens. Components, career/skill accents, map surfaces, and all case-study pages share these tokens. Thumbnail text panels use light surfaces; the illustrative image files and original project images retain their source colors. Shadows are soft neutral tints. The favicon uses an ivory background with dark initials and a saffron dot.
+
+Typography uses dedicated `--text-*` tokens. Browser-resolved colors and WCAG contrast ratios against the ivory background are:
+
+| Token | Approximate resolved color | Contrast on ivory |
+| --- | --- | --- |
+| `--text-primary` | `#0B0B0B` | 16.11:1 |
+| `--text-body` | `#323739` | 9.87:1 |
+| `--text-secondary` | `#3F4548` | 7.97:1 |
+| `--text-accent` | `#65401A` | 7.47:1 |
+| `--text-bronze` | `#5A4829` | 7.18:1 |
+| `--text-inactive` | `#595D5F` | 5.45:1 |
+
+All normal text tokens, including hover accents, were measured against ivory, card surfaces, raised surfaces, and accent-tinted surfaces: the lowest of the 28 combinations is 4.85:1, above the WCAG AA 4.5:1 normal-text threshold. Inverse and filled-button labels also meet 4.5:1 on their actual backgrounds. Inactive map wordmarks use opaque grey lettering instead of fading the whole badge. Embedded project images retain their original colors and are outside these HTML/CSS typography measurements.
 
 ## My experience map
 

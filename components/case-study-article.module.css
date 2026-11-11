@@ -124,7 +124,7 @@
   text-wrap: balance;
 }
 .paragraph {
-  color: var(--muted);
+  color: var(--text-body);
   font-size: 15px;
   line-height: 1.95;
   overflow-wrap: break-word;
@@ -179,7 +179,7 @@ h4.subheading {
   list-style: disc;
   padding-left: 20px;
   margin-block: 22px 0;
-  color: var(--muted);
+  color: var(--text-body);
   font-size: 15px;
   line-height: 1.95;
 }
@@ -217,7 +217,7 @@ h4.subheading {
 }
 .quote blockquote {
   margin: 0;
-  color: var(--muted);
+  color: var(--text-body);
   font-size: 14px;
   line-height: 1.9;
 }
@@ -287,7 +287,7 @@ h4.subheading {
 }
 .card p {
   margin-top: 14px;
-  color: var(--muted);
+  color: var(--text-body);
   font-size: 13px;
   line-height: 1.95;
 }
@@ -369,13 +369,13 @@ h4.subheading {
 .table tbody th {
   width: 50%;
   font-weight: 450;
-  color: var(--muted);
+  color: var(--text-body);
 }
 .table tbody tr {
   border-top: 1px solid var(--line);
 }
 .table tbody td {
-  color: var(--muted);
+  color: var(--text-body);
   white-space: nowrap;
 }
 .table tr > :last-child {
@@ -423,7 +423,7 @@ h4.subheading {
   background: var(--accent-soft);
 }
 .comparisonTable tr > :last-child {
-  color: var(--muted);
+  color: var(--text-body);
   font-weight: 450;
 }
 .comparisonTable thead tr > :last-child {
@@ -454,7 +454,7 @@ h4.subheading {
   background: var(--surface);
 }
 .researchTable tr > :last-child {
-  color: var(--muted);
+  color: var(--text-body);
   font-weight: 450;
 }
 .researchTable thead tr > :last-child {

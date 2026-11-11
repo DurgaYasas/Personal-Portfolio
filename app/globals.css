@@ -15,14 +15,22 @@
   --bronze-sand: #b08a4a;
   --stone-grey: #3f4548;
 
+  /* Light-theme typography: do not use raw saffron or bronze for body text. */
+  --text-primary: var(--obsidian);
+  --text-body: color-mix(in srgb, var(--stone-grey) 75%, var(--obsidian));
+  --text-secondary: var(--stone-grey);
+  --text-accent: color-mix(in srgb, var(--burnt-saffron) 48%, var(--obsidian));
+  --text-bronze: color-mix(in srgb, var(--bronze-sand) 48%, var(--obsidian));
+  --text-inactive: color-mix(in srgb, var(--stone-grey) 85%, var(--warm-ivory));
+  --text-inverse: var(--warm-ivory);
+
   --paper: var(--warm-ivory);
-  --ink: var(--obsidian);
-  /* Text accents use deeper palette mixes for contrast on light surfaces. */
-  --accent: color-mix(in srgb, var(--burnt-saffron) 64%, var(--obsidian));
-  --accent-secondary: color-mix(in srgb, var(--bronze-sand) 65%, var(--obsidian));
-  --accent-hover: color-mix(in srgb, var(--burnt-saffron) 52%, var(--obsidian));
-  --muted: var(--stone-grey);
-  --ink-soft: color-mix(in srgb, var(--stone-grey) 80%, var(--obsidian));
+  --ink: var(--text-primary);
+  --accent: var(--text-accent);
+  --accent-secondary: var(--text-bronze);
+  --accent-hover: color-mix(in srgb, var(--burnt-saffron) 42%, var(--obsidian));
+  --muted: var(--text-secondary);
+  --ink-soft: var(--text-body);
   --line: color-mix(in srgb, var(--stone-grey) 23%, var(--warm-ivory));
   --surface: color-mix(in srgb, var(--warm-ivory) 45%, white);
   --surface-raised: color-mix(in srgb, var(--warm-ivory) 65%, white);
@@ -30,7 +38,7 @@
   --accent-line: color-mix(in srgb, var(--bronze-sand) 65%, var(--paper));
   --action-bg: var(--burnt-saffron);
   --action-hover: color-mix(in srgb, var(--burnt-saffron) 85%, var(--warm-ivory));
-  --action-ink: var(--obsidian);
+  --action-ink: var(--text-primary);
   --map-land: color-mix(in srgb, var(--stone-grey) 12%, var(--paper));
   --shadow-soft: color-mix(in srgb, var(--obsidian) 8%, transparent);
   --shadow-raised: color-mix(in srgb, var(--obsidian) 12%, transparent);
@@ -67,7 +75,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 ::selection {
-  color: var(--paper);
+  color: var(--text-inverse);
   background: var(--accent);
 }
 a {
@@ -326,7 +334,7 @@ p {
   transform: translate(3px, -3px);
 }
 .project-link > p {
-  color: var(--muted);
+  color: var(--text-body);
   font-size: 11px;
   line-height: 1.8;
   margin-top: 10px;
@@ -526,7 +534,7 @@ p {
   display: block;
 }
 .dash-heading h3 > span {
-  color: var(--bronze-sand);
+  color: var(--text-bronze);
 }
 .dash-heading p {
   font-size: 5px;
@@ -1009,7 +1017,7 @@ p {
 }
 .about-copy > p:nth-child(2) {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--text-body);
   line-height: 1.9;
   margin-top: 19px;
 }
@@ -1052,7 +1060,7 @@ p {
 .approach-item p {
   font-size: 11px;
   line-height: 1.9;
-  color: var(--muted);
+  color: var(--text-body);
   margin-top: 11px;
   max-width: 280px;
 }
