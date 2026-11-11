@@ -20,7 +20,7 @@ export function MyExperience() {
           <p className={styles.intro}>
             Explore the places behind the work.
             <br />
-            Hover, focus or tap a country to discover more.
+            Click or tap a hotspot to discover the projects.
           </p>
         </header>
         <ExperienceMap countries={experienceCountries}>
