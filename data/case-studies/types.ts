@@ -6,7 +6,52 @@ export type CaseStudyImage = {
   background?: "white";
 };
 
+export type CompetitorAnalysisBlock = {
+  type: "competitor-analysis";
+  id: string;
+  items: {
+    id: string;
+    name: string;
+    logo?: CaseStudyImage & { crop?: "board-header" };
+    strengths: string[];
+    weaknesses: string[];
+  }[];
+};
+
+export type PersonaCollectionBlock = {
+  type: "personas";
+  id: string;
+  items: {
+    id: string;
+    name: string;
+    role: string;
+    age: string;
+    summary: string;
+    portrait?: CaseStudyImage;
+    goals: string[];
+    painPoints: string[];
+  }[];
+};
+
+export type DesignSystemBlock = {
+  type: "design-system";
+  id: string;
+  colors: { name: string; value: string }[];
+  typography: {
+    name: string;
+    fontFamily: string;
+    glyphs: string;
+    samples: {
+      role: "Display" | "Heading" | "Body" | "Caption" | "Label";
+      text: string;
+    }[];
+  };
+};
+
 export type ArticleBlock =
+  | CompetitorAnalysisBlock
+  | PersonaCollectionBlock
+  | DesignSystemBlock
   | { type: "paragraph"; text: string; emphasis?: string[] }
   | { type: "list"; items: string[] }
   | {

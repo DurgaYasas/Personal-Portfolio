@@ -4,6 +4,11 @@ import { ArrowLeft, ArrowUpRight, ChevronDown, ImageIcon } from "lucide-react";
 import type { ArticleBlock } from "@/data/case-studies/types";
 import type { CaseStudyProject } from "@/data/projects";
 import { CaseStudyCover } from "./case-study-cover";
+import {
+  CompetitorAnalysis,
+  DesignSystem,
+  UserPersonas,
+} from "./case-study-panels";
 import { Footer } from "./footer";
 import { Navigation } from "./navigation";
 import { Reveal } from "./reveal";
@@ -43,6 +48,12 @@ function ArticleBlocks({
   return blocks.map((block, index) => {
     const key = "id" in block ? block.id : `${block.type}-${index}`;
     switch (block.type) {
+      case "competitor-analysis":
+        return <CompetitorAnalysis key={key} block={block} />;
+      case "personas":
+        return <UserPersonas key={key} block={block} />;
+      case "design-system":
+        return <DesignSystem key={key} block={block} />;
       case "paragraph":
         return (
           <p key={key} className={styles.paragraph}>

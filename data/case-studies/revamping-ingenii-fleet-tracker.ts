@@ -1,6 +1,12 @@
 import type { SourceCaseStudy } from "./types";
+import {
+  ingeniiCompetitors,
+  ingeniiDesignSystem,
+  ingeniiPersonas,
+} from "./ingenii-native-sections";
 
-// Transcribed from the supplied 29-page PDF. Preserve the original wording.
+// Base article transcribed from the supplied 29-page PDF.
+// Three sections use the owner-approved screenshot updates in ingenii-native-sections.ts.
 // Original embedded design images are extracted once, including full images split by print pagination.
 // Browser print headers, navigation, page counters and the copyright footer are excluded.
 export const ingeniiFleetTracker: SourceCaseStudy = {
@@ -81,41 +87,7 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
     {
       id: "competitor-analysis",
       title: "Competitor Analysis",
-      blocks: [
-        {
-          type: "figure",
-          id: "ingenii-competitor-analysis-1",
-          image: {
-            src: "/images/ingenii-fleet-tracker/competitor-analysis-1.png",
-            alt: "First competitor analysis comparison of tracking functionality and usability",
-            width: 2880,
-            height: 2880,
-            background: "white",
-          },
-        },
-        {
-          type: "figure",
-          id: "ingenii-competitor-analysis-2",
-          image: {
-            src: "/images/ingenii-fleet-tracker/competitor-analysis-2.png",
-            alt: "Second competitor analysis comparison of tracking functionality and usability",
-            width: 2880,
-            height: 2880,
-            background: "white",
-          },
-        },
-        {
-          type: "figure",
-          id: "ingenii-competitor-analysis-3",
-          image: {
-            src: "/images/ingenii-fleet-tracker/competitor-analysis-3.png",
-            alt: "Third competitor analysis comparison of tracking functionality and usability",
-            width: 2880,
-            height: 2880,
-            background: "white",
-          },
-        },
-      ],
+      blocks: [ingeniiCompetitors],
     },
     {
       id: "user-interviews",
@@ -231,174 +203,7 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
     {
       id: "user-personas",
       title: "User Personas",
-      blocks: [
-        {
-          type: "paragraph",
-          text: "Using the interview outcomes i constructed a user persona of a fleet managerLittle intro text",
-        },
-        {
-          type: "subsection",
-          id: "shehan-bandara",
-          title: "1. Shehan Bandara",
-          blocks: [
-            {
-              type: "paragraph",
-              text: "Fleet Manager",
-            },
-            {
-              type: "figure",
-              id: "ingenii-persona-shehan-bandara",
-              image: {
-                src: "/images/ingenii-fleet-tracker/persona-shehan-bandara.png",
-                alt: "Portrait supplied for the Shehan Bandara fleet-manager persona",
-                width: 321,
-                height: 322,
-                background: "white",
-              },
-            },
-            {
-              type: "paragraph",
-              text: "Gender: Male",
-              emphasis: ["Gender:"],
-            },
-            {
-              type: "paragraph",
-              text: "Age: 25",
-              emphasis: ["Age:"],
-            },
-            {
-              type: "paragraph",
-              text: "Experience: 1 Year",
-              emphasis: ["Experience:"],
-            },
-            {
-              type: "paragraph",
-              text: "Location: Colombo",
-              emphasis: ["Location:"],
-            },
-            {
-              type: "subsection",
-              id: "shehan-personality",
-              title: "Personality",
-              blocks: [
-                {
-                  type: "paragraph",
-                  text: "Easily stressed, Punctual, Extrovert",
-                },
-              ],
-            },
-            {
-              type: "subsection",
-              id: "shehan-goals",
-              title: "Goals",
-              blocks: [
-                {
-                  type: "paragraph",
-                  text: "Obtaining accurate data related to KPI, reduce fuel costs, optimise vehicle utilisation, Be alert on event notifications related to entity activities.",
-                },
-              ],
-            },
-            {
-              type: "subsection",
-              id: "shehan-hates",
-              title: "Hates to…",
-              blocks: [
-                {
-                  type: "list",
-                  items: [
-                    "Difficulty of obtaining high load of tracking details in an organized manner.",
-                    "When UI elements are non appealing.",
-                    "Read vehicle specs through widget panelObtaining accurate data related to KPI, reduce fuel costs, optimise vehicle utilisation, Be alert on event notifications related to entity activities.",
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          type: "subsection",
-          id: "dasuni-perera",
-          title: "2. Dasuni Perera",
-          blocks: [
-            {
-              type: "paragraph",
-              text: "Fleet Admin",
-            },
-            {
-              type: "figure",
-              id: "ingenii-persona-dasuni-perera",
-              image: {
-                src: "/images/ingenii-fleet-tracker/persona-dasuni-perera.png",
-                alt: "Portrait supplied for the Dasuni Perera fleet-admin persona",
-                width: 321,
-                height: 322,
-                background: "white",
-              },
-            },
-            {
-              type: "paragraph",
-              text: "Gender: Female",
-              emphasis: ["Gender:"],
-            },
-            {
-              type: "paragraph",
-              text: "Age: 28",
-              emphasis: ["Age:"],
-            },
-            {
-              type: "paragraph",
-              text: "Experience: 3 Years",
-              emphasis: ["Experience:"],
-            },
-            {
-              type: "paragraph",
-              text: "Location: Colombo",
-              emphasis: ["Location:"],
-            },
-            {
-              type: "subsection",
-              id: "dasuni-personality",
-              title: "Personality",
-              blocks: [
-                {
-                  type: "paragraph",
-                  text: "Perfectionist, Organised, Introvert",
-                },
-              ],
-            },
-            {
-              type: "subsection",
-              id: "dasuni-goals",
-              title: "PersonalityGoals",
-              blocks: [
-                {
-                  type: "list",
-                  items: [
-                    "Identify and filter vehicle statuses",
-                    "To identify important vehicle specs in the first glance.",
-                    "To see vehicle tracking timeline in segmented view with vehicle location and clear duration.Perfectionist, Organised, Introvert",
-                  ],
-                },
-              ],
-            },
-            {
-              type: "subsection",
-              id: "dasuni-hates",
-              title: "Hates To…",
-              blocks: [
-                {
-                  type: "list",
-                  items: [
-                    "See large categories of information are cluttered and disorganised.",
-                    "To read the tracking details and the graph sice the UI and data are so vague.",
-                    "Read vehicle specs through widget panel",
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
+      blocks: [ingeniiPersonas],
     },
     {
       id: "user-journey",
@@ -690,42 +495,8 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
     },
     {
       id: "design-kit",
-      title: "Design Kit",
-      blocks: [
-        {
-          type: "figure",
-          id: "ingenii-design-kit-1",
-          image: {
-            src: "/images/ingenii-fleet-tracker/design-kit-1.png",
-            alt: "Ingenii design kit, first foundation board",
-            width: 1920,
-            height: 1920,
-            background: "white",
-          },
-        },
-        {
-          type: "figure",
-          id: "ingenii-design-kit-2",
-          image: {
-            src: "/images/ingenii-fleet-tracker/design-kit-2.png",
-            alt: "Ingenii design kit, second foundation board",
-            width: 1920,
-            height: 1920,
-            background: "white",
-          },
-        },
-        {
-          type: "figure",
-          id: "ingenii-design-kit-components",
-          image: {
-            src: "/images/ingenii-fleet-tracker/design-kit-components.png",
-            alt: "Complete Ingenii design kit component collection",
-            width: 1920,
-            height: 9840,
-            background: "white",
-          },
-        },
-      ],
+      title: "Design System",
+      blocks: [ingeniiDesignSystem],
     },
     {
       id: "final-product",
