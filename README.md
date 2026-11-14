@@ -25,7 +25,7 @@ No environment variables, API keys, or external services are required. Do not ru
 
 ## Structure
 
-- `app/page.tsx`: homepage and approach content.
+- `app/page.tsx`: homepage section composition and featured work.
 - `app/work/[slug]/page.tsx`: statically generated case-study template and metadata.
 - `app/globals.css`: responsive visual system and illustrative product surfaces, alongside Tailwind.
 - `components/`: navigation, scroll reveals, cards, UI illustrations, and footer.
@@ -33,6 +33,8 @@ No environment variables, API keys, or external services are required. Do not ru
 - `components/hero.tsx` and `components/hero.module.css`: the centered hero based on the supplied reference, using the shared light theme.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
+- `data/practice.ts`: screenshot-supplied AI spotlight copy, five sprint steps/timings, and eleven tool self-ratings across four groups.
+- `components/ai-innovation.tsx`, `toolkit.tsx`, and `practice-sections.module.css`: the two sections after Works, using the shared light theme and reduced-motion-aware reveal/hover behavior.
 - `data/experience.ts`: country locations, confirmed project descriptions, case-study links, and optional original logo paths for the interactive My experience map.
 - `components/my-experience.tsx`, `experience-map.tsx`, and `my-experience.module.css`: the section between the hero and career journey. `experience-world-map.tsx` renders the locally bundled Natural Earth country outlines on the server; see `data/maps/README.md` for provenance.
 - `components/career-journey.tsx` and `components/skills-expertise.tsx`: the two sections immediately after the hero; `profile-motion.tsx` provides the scroll-driven timeline and one-time skill-bar fills. Their styles live in `profile-sections.module.css`.
@@ -136,6 +138,8 @@ GitHub is linked using the supplied repository owner's public profile; confirm t
 
 Motion respects the operating system's reduced-motion preference. Navigation supports keyboard focus, a skip link, and an Escape-dismissable mobile menu. Decorative mockups are hidden from assistive technology.
 
-The career timeline, professional background badges, five achievements, and four skill groups use the content supplied in the career/skills reference image. Percentage values are retained as supplied and exposed through labeled meters. On smaller screens the career timeline and skill cards stack vertically. Reduced-motion mode displays complete bars and a complete timeline without movement. The About navigation target is the new career section; the previous introduction and design principles remain under Design Approach.
+The career timeline, professional background badges, five achievements, and four skill groups use the content supplied in the career/skills reference image. Percentage values are retained as supplied and exposed through labeled meters. On smaller screens the career timeline and skill cards stack vertically. Reduced-motion mode displays complete bars and a complete timeline without movement. The About navigation target remains the career section.
+
+AI & Innovation Spotlight and My Toolkit follow Works and precede Contact. They replace the former Design Approach section and its closing design-principle note. Their copy, 60% iteration claim, sprint timings, and self-ratings come from the owner's supplied screenshots; no new performance figures or tool ratings are inferred. The five sprint steps are an ordered process, not a time-scaled schedule. Tool ratings are static five-star displays with screen-reader labels (for example, “4 out of 5 stars”), rather than editable rating controls. Filled and outlined star shapes distinguish their values without relying on color alone. The card grids adapt from four to two to one column; the sprint becomes a vertical sequence on small screens. Typography and icon colors use the existing high-contrast light-theme tokens. Edit the content in `data/practice.ts`.
 
 No deployment has been configured or performed.

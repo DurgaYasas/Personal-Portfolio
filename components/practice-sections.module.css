@@ -1,0 +1,312 @@
+.section {
+  padding-block: 72px 82px;
+  scroll-margin-top: 35px;
+}
+.aiSection {
+  border-top: 1px solid var(--line);
+}
+.sectionHeader {
+  max-width: 790px;
+  margin-inline: auto;
+  text-align: center;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  max-width: 100%;
+  padding: 9px 14px;
+  border: 1px solid var(--accent-line);
+  border-radius: 99px;
+  color: var(--text-accent);
+  background: var(--accent-soft);
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.sectionHeader h2 {
+  margin-top: 22px;
+  color: var(--text-primary);
+  font-size: clamp(29px, 3.2vw, 42px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+  text-wrap: balance;
+}
+.introduction {
+  max-width: 740px;
+  margin: 22px auto 0;
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.85;
+}
+.eyebrow {
+  color: var(--text-accent);
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.6;
+  letter-spacing: 1.7px;
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  margin-top: 48px;
+}
+.gridItem {
+  min-width: 0;
+}
+.card {
+  height: 100%;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.featureIcon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 24px;
+  border: 1px solid var(--accent-line);
+  border-radius: 13px;
+  color: var(--text-accent);
+  background: var(--accent-soft);
+}
+.card h3 {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: -0.35px;
+}
+.cardDescription {
+  margin-top: 12px;
+  color: var(--text-body);
+  font-size: 13px;
+  line-height: 1.85;
+}
+.sprint {
+  margin-top: 34px;
+  padding: 30px;
+  border: 1px solid var(--accent-line);
+  border-radius: 16px;
+  background: var(--accent-soft);
+}
+.sprint > h3 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+}
+.sprint > h3 > svg {
+  color: var(--text-accent);
+}
+.sprintSteps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin: 30px 0 0;
+  list-style: none;
+}
+.sprintStep {
+  position: relative;
+  min-width: 0;
+}
+.stepTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.stepNumber {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--accent-line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-accent);
+  font-size: 12px;
+  font-weight: 750;
+}
+.stepArrow {
+  color: var(--text-secondary);
+}
+.stepBody {
+  margin-top: 17px;
+}
+.stepBody h4 {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+.duration {
+  margin-top: 3px;
+  color: var(--text-accent);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.7;
+}
+.stepDescription {
+  margin-top: 8px;
+  color: var(--text-body);
+  font-size: 12px;
+  line-height: 1.85;
+}
+.toolkitSection {
+  padding-top: 54px;
+  padding-bottom: 100px;
+}
+.toolkitCard h3 {
+  min-height: 49px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.tools {
+  display: grid;
+  gap: 22px;
+  margin: 25px 0 0;
+}
+.tools > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tools dt {
+  min-width: 0;
+  color: var(--text-body);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.tools dd {
+  flex-shrink: 0;
+  margin: 0;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.filledStar {
+  color: var(--text-accent);
+}
+.emptyStar {
+  color: var(--text-inactive);
+}
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-line);
+    box-shadow: 0 10px 25px var(--shadow-soft);
+  }
+}
+@media (max-width: 1100px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .section {
+    padding-block: 46px 52px;
+  }
+  .sectionHeader h2 {
+    margin-top: 18px;
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+  .introduction {
+    margin-top: 18px;
+    font-size: 13px;
+  }
+  .badge {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+  .cardGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin-top: 31px;
+  }
+  .card {
+    padding: 23px;
+  }
+  .featureIcon {
+    margin-bottom: 20px;
+  }
+  .sprint {
+    padding: 23px;
+    margin-top: 24px;
+  }
+  .sprint > h3 {
+    align-items: start;
+    gap: 9px;
+    font-size: 16px;
+  }
+  .sprint > h3 > svg {
+    margin-top: 3px;
+  }
+  .sprintSteps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 27px;
+  }
+  .sprintStep {
+    display: grid;
+    grid-template-columns: 35px minmax(0, 1fr);
+    align-items: start;
+    gap: 15px;
+  }
+  .sprintStep:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    bottom: -17px;
+    left: 17px;
+    width: 1px;
+    background: var(--accent-line);
+  }
+  .stepBody {
+    margin-top: 4px;
+  }
+  .stepArrow {
+    display: none;
+  }
+  .toolkitSection {
+    padding-top: 34px;
+    padding-bottom: 65px;
+  }
+  .toolkitCard h3 {
+    min-height: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}
+@media (forced-colors: active) {
+  .featureIcon,
+  .badge,
+  .stepNumber,
+  .sprint {
+    border-color: CanvasText;
+  }
+  .sprintStep::before {
+    background: CanvasText;
+  }
+}
