@@ -48,10 +48,48 @@ export type DesignSystemBlock = {
   };
 };
 
+export type JourneyReaction = "smile" | "neutral" | "frown" | "surprised";
+
+export type UserJourneyBlock = {
+  type: "user-journey";
+  id: string;
+  caption: string;
+  phases: {
+    id: string;
+    title: string;
+    activity: string;
+    thought: string;
+    reaction: JourneyReaction;
+    opportunity: string;
+  }[];
+};
+
+export type UserFlowBlock = {
+  type: "user-flow";
+  id: string;
+  caption: string;
+  nodes: {
+    id: string;
+    title: string;
+    kind?: "start" | "highlight";
+    details?: string[];
+    x: number;
+    y: number;
+    width: number;
+  }[];
+  edges: {
+    from: string;
+    to: string;
+    points: [number, number][];
+  }[];
+};
+
 export type ArticleBlock =
   | CompetitorAnalysisBlock
   | PersonaCollectionBlock
   | DesignSystemBlock
+  | UserJourneyBlock
+  | UserFlowBlock
   | { type: "paragraph"; text: string; emphasis?: string[] }
   | { type: "list"; items: string[] }
   | {

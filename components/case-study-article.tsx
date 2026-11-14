@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowUpRight, ChevronDown, ImageIcon } from "lucide-react";
 import type { ArticleBlock } from "@/data/case-studies/types";
 import type { CaseStudyProject } from "@/data/projects";
 import { CaseStudyCover } from "./case-study-cover";
+import { UserFlow, UserJourney } from "./case-study-journeys";
 import {
   CompetitorAnalysis,
   DesignSystem,
@@ -48,6 +49,10 @@ function ArticleBlocks({
   return blocks.map((block, index) => {
     const key = "id" in block ? block.id : `${block.type}-${index}`;
     switch (block.type) {
+      case "user-journey":
+        return <UserJourney key={key} block={block} headingLevel={depth > 3 ? 4 : 3} />;
+      case "user-flow":
+        return <UserFlow key={key} block={block} headingLevel={depth > 3 ? 4 : 3} />;
       case "competitor-analysis":
         return <CompetitorAnalysis key={key} block={block} />;
       case "personas":

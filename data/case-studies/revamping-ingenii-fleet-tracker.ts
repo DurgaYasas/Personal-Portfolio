@@ -1,5 +1,10 @@
 import type { SourceCaseStudy } from "./types";
 import {
+  ingeniiEventsJourney,
+  ingeniiTrackingJourney,
+  ingeniiUserFlow,
+} from "./ingenii-journeys";
+import {
   ingeniiCompetitors,
   ingeniiDesignSystem,
   ingeniiPersonas,
@@ -222,17 +227,7 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
                 "To view tracking history",
               ],
             },
-            {
-              type: "figure",
-              id: "ingenii-user-journey-attributes",
-              image: {
-                src: "/images/ingenii-fleet-tracker/user-journey-attributes.png",
-                alt: "User journey for searching entities, viewing attributes and reviewing tracking history",
-                width: 1024,
-                height: 1024,
-                background: "white",
-              },
-            },
+            ingeniiTrackingJourney,
           ],
         },
         {
@@ -244,17 +239,7 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
               type: "paragraph",
               text: "To view events details",
             },
-            {
-              type: "figure",
-              id: "ingenii-user-journey-events",
-              image: {
-                src: "/images/ingenii-fleet-tracker/user-journey-events.png",
-                alt: "User journey for viewing event details",
-                width: 1024,
-                height: 880,
-                background: "white",
-              },
-            },
+            ingeniiEventsJourney,
           ],
         },
       ],
@@ -267,17 +252,7 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
           type: "paragraph",
           text: "Based on the conclusions observed from the above methods, I created a user flow for the expected solution",
         },
-        {
-          type: "figure",
-          id: "ingenii-user-flow",
-          image: {
-            src: "/images/ingenii-fleet-tracker/user-flow.png",
-            alt: "Proposed user flow for the Ingenii fleet tracking platform",
-            width: 1024,
-            height: 812,
-            background: "white",
-          },
-        },
+        ingeniiUserFlow,
       ],
     },
     {
