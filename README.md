@@ -30,11 +30,11 @@ No environment variables, API keys, or external services are required. Do not ru
 - `app/globals.css`: responsive visual system and illustrative product surfaces, alongside Tailwind.
 - `components/`: navigation, scroll reveals, cards, UI illustrations, and footer.
 - `components/project-thumbnail.tsx` and its CSS module: responsive homepage artwork, editorial feature copy, source labels, and hover/focus motion. Each project's `thumbnail` in `data/projects.ts` configures its artwork, headline, and detail line independently from the article cover.
-- `components/hero.tsx` and `components/hero.module.css`: the centered hero based on the supplied reference, using the shared light theme.
+- `components/hero.tsx` and `components/hero.module.css`: the centered hero based on the supplied reference, using the shared dark theme.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
 - `data/practice.ts`: screenshot-supplied AI spotlight copy, five sprint steps/timings, and eleven tool self-ratings across four groups.
-- `components/ai-innovation.tsx`, `toolkit.tsx`, and `practice-sections.module.css`: the two sections after Works, using the shared light theme and reduced-motion-aware reveal/hover behavior.
+- `components/ai-innovation.tsx`, `toolkit.tsx`, and `practice-sections.module.css`: the two sections after Works, using the shared dark theme and reduced-motion-aware reveal/hover behavior.
 - `data/experience.ts`: country locations, confirmed project descriptions, case-study links, and optional original logo paths for the interactive My experience map.
 - `components/my-experience.tsx`, `experience-map.tsx`, and `my-experience.module.css`: the section between the hero and career journey. `experience-world-map.tsx` renders the locally bundled Natural Earth country outlines on the server; see `data/maps/README.md` for provenance.
 - `components/career-journey.tsx` and `components/skills-expertise.tsx`: the two sections immediately after the hero; `profile-motion.tsx` provides the scroll-driven timeline and one-time skill-bar fills. Their styles live in `profile-sections.module.css`.
@@ -49,20 +49,20 @@ No environment variables, API keys, or external services are required. Do not ru
 
 ## Color palette
 
-The site uses a light theme with Warm Ivory `#ECE8E0` backgrounds, Obsidian `#0B0B0B` headings, dark charcoal body copy, Stone Grey `#3F4548` secondary labels, and pale card surfaces mixed with white. Burnt Saffron `#C77A2B` and Bronze Sand `#B08A4A` remain the accent swatches. Semantic tokens in `app/globals.css` derive deeper accent text colors for contrast on light backgrounds, while filled saffron buttons retain obsidian labels through separate action tokens. Components, career/skill accents, map surfaces, and all case-study pages share these tokens. Thumbnail text panels use light surfaces; the illustrative image files and original project images retain their source colors. Shadows are soft neutral tints. The favicon uses an ivory background with dark initials and a saffron dot.
+The site follows the latest dark reference: Midnight `#090B13` with a subtle Navy `#0C1222` opening background, Blue `#0066FF` primary actions, Cyan `#00C8EE` text accents, and cool dark card surfaces. The hero highlight blends blue into cyan; the availability dot remains green. Shared semantic tokens in `app/globals.css` theme the homepage, map, toolkit, and every case-study page. The favicon uses navy, light initials, and a cyan dot. Original project images and illustrative artwork retain their source colors; legacy warm primitive variables are isolated from website branding.
 
-Typography uses dedicated `--text-*` tokens. Browser-resolved colors and WCAG contrast ratios against the ivory background are:
+Typography uses dedicated `--text-*` tokens. Contrast against the Midnight base is:
 
-| Token | Approximate resolved color | Contrast on ivory |
+| Token | Color | Contrast on Midnight |
 | --- | --- | --- |
-| `--text-primary` | `#0B0B0B` | 16.11:1 |
-| `--text-body` | `#323739` | 9.87:1 |
-| `--text-secondary` | `#3F4548` | 7.97:1 |
-| `--text-accent` | `#65401A` | 7.47:1 |
-| `--text-bronze` | `#5A4829` | 7.18:1 |
-| `--text-inactive` | `#595D5F` | 5.45:1 |
+| `--text-primary` | `#F0F1F6` | 17.42:1 |
+| `--text-body` | `#C4C8D6` | 11.77:1 |
+| `--text-secondary` | `#A4ABBE` | 8.56:1 |
+| `--text-accent` | `#00C8EE` | 9.82:1 |
+| `--text-secondary-accent` | `#7DBBFF` | 9.75:1 |
+| `--text-inactive` | `#9299AD` | 6.91:1 |
 
-All normal text tokens, including hover accents, were measured against ivory, card surfaces, raised surfaces, and accent-tinted surfaces: the lowest of the 28 combinations is 4.85:1, above the WCAG AA 4.5:1 normal-text threshold. Inverse and filled-button labels also meet 4.5:1 on their actual backgrounds. Inactive map wordmarks use opaque grey lettering instead of fading the whole badge. Embedded project images retain their original colors and are outside these HTML/CSS typography measurements.
+Normal text tokens are checked against the base, opening navy, card, raised-card, and accent-tinted surfaces. Filled blue buttons use separate pure-white action labels (4.83:1 normally; 5.99:1 on hover). Inverse labels use Midnight on the bright cyan/light-blue surfaces. The hero gradient is limited to the large bold heading and checked against the large-text threshold. Inactive map wordmarks remain opaque grey, so their lettering stays readable. Source image contents are outside these HTML/CSS typography measurements. The compatibility alias `--text-bronze` now resolves to the secondary blue accent.
 
 ## My experience map
 
@@ -121,7 +121,7 @@ The native fleet sections are edited in `data/case-studies/ingenii-native-sectio
 | `personas` | `items`: name, role, age, summary, optional portrait, goals, pain points | Nihal Perera and Dilini Fernando from the new screenshots; two columns or one column; initials appear when no portrait asset is supplied |
 | `design-system` | `colors`: name/value; `typography`: typeface, glyphs, role samples | Eight exact project swatches and five Inter type samples; paired panels stack on narrow content widths |
 
-All findings, persona content, swatch labels/hex values, and typography samples are selectable HTML. Competitor logo headers reuse only the logo portions of the original boards through CSS clipping (`logo.crop: "board-header"`); a standalone logo asset can omit `crop`. Original photos are not reassigned to the new persona identities; add their own `portrait` assets when available. The Inter variable font is bundled through Fontsource and scoped to the type specimens; the portfolio retains Manrope. Project swatches preserve the screenshot's colors, while card surfaces and readable text follow the portfolio's light-theme tokens. The existing `#design-kit` section anchor remains valid, with `#design-system` available as an additional anchor. These are static informational components, with semantic headings and lists, no added focus stops, and no animation.
+All findings, persona content, swatch labels/hex values, and typography samples are selectable HTML. Competitor logo headers reuse only the logo portions of the original boards through CSS clipping (`logo.crop: "board-header"`); a standalone logo asset can omit `crop`. Original photos are not reassigned to the new persona identities; add their own `portrait` assets when available. The Inter variable font is bundled through Fontsource and scoped to the type specimens; the portfolio retains Manrope. Project swatches preserve the screenshot's colors, while card surfaces and readable text follow the portfolio's shared theme tokens. The existing `#design-kit` section anchor remains valid, with `#design-system` available as an additional anchor. These are static informational components, with semantic headings and lists, no added focus stops, and no animation.
 
 The User Journey and User Flow components are configured in `data/case-studies/ingenii-journeys.ts`:
 
@@ -132,14 +132,14 @@ The User Journey and User Flow components are configured in `data/case-studies/i
 
 Journey maps are semantic tables with labeled, keyboard-scrollable regions and sticky row headings. Reaction curves use native SVG lines and fixed-size SVG face markers; the icons do not stretch with the plot. Reaction labels describe the source pictograms (Smiling, Neutral, Frowning, Open mouth), not numeric research scores. Phase, activity, thought, and opportunity wording retains source grammar. The original goals and introductory text remain in the parent article.
 
-Flow nodes are HTML headings and lists, with native SVG connectors rendered from the edge data. Both incoming branches retain their convergence at date selection. On narrow screens, the same nodes reflow into cards with explicit next-step anchor links; desktop screen readers receive the same branch relationships as text. The three original figure IDs remain valid anchors, and the source PNGs are retained for reference. The components render without JavaScript, introduce no new animation or dependencies, and inherit the portfolio's light-theme text colors.
+Flow nodes are HTML headings and lists, with native SVG connectors rendered from the edge data. Both incoming branches retain their convergence at date selection. On narrow screens, the same nodes reflow into cards with explicit next-step anchor links; desktop screen readers receive the same branch relationships as text. The three original figure IDs remain valid anchors, and the source PNGs are retained for reference. The components render without JavaScript, introduce no new animation or dependencies, and inherit the portfolio's shared text colors.
 
 GitHub is linked using the supplied repository owner's public profile; confirm the preferred contact destination before publication. A resume PDF and email address have not been supplied.
 
 Motion respects the operating system's reduced-motion preference. Navigation supports keyboard focus, a skip link, and an Escape-dismissable mobile menu. Decorative mockups are hidden from assistive technology.
 
-The career timeline, professional background badges, five achievements, and four skill groups use the content supplied in the career/skills reference image. Percentage values are retained as supplied and exposed through labeled meters. On smaller screens the career timeline and skill cards stack vertically. Reduced-motion mode displays complete bars and a complete timeline without movement. The About navigation target remains the career section.
+The career timeline, professional background badges, and four skill groups use the supplied career/skills reference. Key Achievements and Learnings has been removed from the homepage; its source entries remain in `data/about.ts` for reference. Percentage values are retained as supplied and exposed through labeled meters. On smaller screens the career timeline and skill cards stack vertically. Reduced-motion mode displays complete bars and a complete timeline without movement. The About navigation target remains the career section.
 
-AI & Innovation Spotlight and My Toolkit follow Works and precede Contact. They replace the former Design Approach section and its closing design-principle note. Their copy, 60% iteration claim, sprint timings, and self-ratings come from the owner's supplied screenshots; no new performance figures or tool ratings are inferred. The five sprint steps are an ordered process, not a time-scaled schedule. Tool ratings are static five-star displays with screen-reader labels (for example, “4 out of 5 stars”), rather than editable rating controls. Filled and outlined star shapes distinguish their values without relying on color alone. The card grids adapt from four to two to one column; the sprint becomes a vertical sequence on small screens. Typography and icon colors use the existing high-contrast light-theme tokens. Edit the content in `data/practice.ts`.
+AI & Innovation Spotlight and My Toolkit follow Works and precede Contact. They replace the former Design Approach section and its closing design-principle note. Their copy, 60% iteration claim, sprint timings, and self-ratings come from the owner's supplied screenshots; no new performance figures or tool ratings are inferred. The five sprint steps are an ordered process, not a time-scaled schedule. Tool ratings are static five-star displays with screen-reader labels (for example, “4 out of 5 stars”), rather than editable rating controls. Filled and outlined star shapes distinguish their values without relying on color alone. The card grids adapt from four to two to one column; the sprint becomes a vertical sequence on small screens. Typography and icon colors use the existing high-contrast theme tokens. Edit the content in `data/practice.ts`.
 
 No deployment has been configured or performed.

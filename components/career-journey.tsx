@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { GraduationCap, MapPin, Sparkles } from "lucide-react";
-import { achievements, careerFacts, careerJourney } from "@/data/about";
+import { careerFacts, careerJourney } from "@/data/about";
 import { Reveal } from "./reveal";
 import { TimelineProgress } from "./profile-motion";
 import styles from "./profile-sections.module.css";
@@ -61,22 +61,6 @@ export function CareerJourney() {
             </li>
           ))}
         </ol>
-      </div>
-
-      <div className={styles.achievements}>
-        <Reveal>
-          <h3>Key Achievements and Learnings</h3>
-        </Reveal>
-        <ul>
-          {achievements.map((achievement, index) => (
-            <li key={achievement}>
-              <Reveal className={styles.achievement} delay={index * 0.025}>
-                <span aria-hidden="true" />
-                <p>{achievement}</p>
-              </Reveal>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );

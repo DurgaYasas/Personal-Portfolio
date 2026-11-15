@@ -64,7 +64,7 @@
   transform: translateX(-50%);
 }
 .brandName {
-  color: var(--text-primary);
+  color: var(--obsidian);
   font-size: 27px;
   font-weight: 800;
 }

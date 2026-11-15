@@ -22,7 +22,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--status-available);
 }
 
 .portraitFrame {
@@ -79,6 +79,10 @@
 
 .accent {
   color: var(--accent);
+  background: var(--hero-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .summary {

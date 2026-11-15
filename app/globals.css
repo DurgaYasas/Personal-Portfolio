@@ -8,57 +8,53 @@
 }
 
 :root {
-  /* Approved palette: keep component colors linked to these five swatches. */
+  /* Original illustrative artwork palette; independent from website branding. */
   --obsidian: #0b0b0b;
   --warm-ivory: #ece8e0;
   --burnt-saffron: #c77a2b;
   --bronze-sand: #b08a4a;
   --stone-grey: #3f4548;
 
-  /* Light-theme typography: do not use raw saffron or bronze for body text. */
-  --text-primary: var(--obsidian);
-  --text-body: color-mix(in srgb, var(--stone-grey) 75%, var(--obsidian));
-  --text-secondary: var(--stone-grey);
-  --text-accent: color-mix(in srgb, var(--burnt-saffron) 48%, var(--obsidian));
-  --text-bronze: color-mix(in srgb, var(--bronze-sand) 48%, var(--obsidian));
-  --text-inactive: color-mix(in srgb, var(--stone-grey) 85%, var(--warm-ivory));
-  --text-inverse: var(--warm-ivory);
+  /* Dark navy / blue / cyan theme supplied in the latest reference. */
+  --midnight: #090b13;
+  --background-top: #0c1222;
+  --primary-blue: #0066ff;
+  --cyan: #00c8ee;
+  --status-available: #10b981;
+  --text-primary: #f0f1f6;
+  --text-body: #c4c8d6;
+  --text-secondary: #a4abbe;
+  --text-accent: var(--cyan);
+  --text-secondary-accent: #7dbbff;
+  --text-bronze: var(--text-secondary-accent);
+  --text-inactive: #9299ad;
+  --text-inverse: var(--midnight);
 
-  --paper: var(--warm-ivory);
+  --paper: var(--midnight);
   --ink: var(--text-primary);
   --accent: var(--text-accent);
-  --accent-secondary: var(--text-bronze);
-  --accent-hover: color-mix(in srgb, var(--burnt-saffron) 42%, var(--obsidian));
+  --accent-secondary: var(--text-secondary-accent);
+  --accent-hover: #69e4ff;
   --muted: var(--text-secondary);
   --ink-soft: var(--text-body);
-  --line: color-mix(in srgb, var(--stone-grey) 23%, var(--warm-ivory));
-  --surface: color-mix(in srgb, var(--warm-ivory) 45%, white);
-  --surface-raised: color-mix(in srgb, var(--warm-ivory) 65%, white);
-  --accent-soft: color-mix(in srgb, var(--bronze-sand) 14%, var(--paper));
-  --accent-line: color-mix(in srgb, var(--bronze-sand) 65%, var(--paper));
-  --action-bg: var(--burnt-saffron);
-  --action-hover: color-mix(in srgb, var(--burnt-saffron) 85%, var(--warm-ivory));
-  --action-ink: var(--text-primary);
-  --map-land: color-mix(in srgb, var(--stone-grey) 12%, var(--paper));
-  --shadow-soft: color-mix(in srgb, var(--obsidian) 8%, transparent);
-  --shadow-raised: color-mix(in srgb, var(--obsidian) 12%, transparent);
-  --illustration-paper: var(--warm-ivory);
-  --illustration-panel: color-mix(
-    in srgb,
-    var(--warm-ivory) 80%,
-    var(--bronze-sand)
-  );
-  --illustration-muted: color-mix(
-    in srgb,
-    var(--stone-grey) 25%,
-    var(--obsidian)
-  );
-  --illustration-line: color-mix(
-    in srgb,
-    var(--stone-grey) 25%,
-    var(--warm-ivory)
-  );
-  color-scheme: light;
+  --line: #303748;
+  --surface: #11141e;
+  --surface-raised: #181d2a;
+  --accent-soft: #102536;
+  --accent-line: #22536e;
+  --action-bg: var(--primary-blue);
+  --action-hover: #0059e0;
+  --action-ink: #ffffff;
+  --hero-accent-gradient: linear-gradient(90deg, var(--primary-blue), var(--cyan));
+  --map-land: #222a38;
+  --shadow-soft: color-mix(in srgb, var(--obsidian) 28%, transparent);
+  --shadow-raised: color-mix(in srgb, var(--obsidian) 48%, transparent);
+
+  --illustration-paper: #f0f6fc;
+  --illustration-panel: #dde9f5;
+  --illustration-muted: #152235;
+  --illustration-line: #becddd;
+  color-scheme: dark;
 }
 * {
   box-sizing: border-box;
@@ -69,7 +65,10 @@ html {
 }
 body {
   margin: 0;
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image: linear-gradient(180deg, var(--background-top), var(--paper));
+  background-size: 100% 1100px;
+  background-repeat: no-repeat;
   color: var(--ink);
   font-family: "Manrope Variable", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -183,18 +182,20 @@ p {
   vertical-align: super;
 }
 .desktop-nav .nav-contact {
+  background: var(--action-bg);
+  color: var(--action-ink);
   display: flex;
   gap: 20px;
   align-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid var(--action-bg);
   padding: 12px 19px;
   border-radius: 50px;
   margin-left: 4px;
 }
 .desktop-nav .nav-contact:hover {
-  background: var(--action-bg);
+  background: var(--action-hover);
   color: var(--action-ink);
-  border-color: var(--action-bg);
+  border-color: var(--action-hover);
 }
 .menu-toggle {
   display: none;
@@ -271,7 +272,7 @@ p {
   position: absolute;
   right: 18px;
   top: 18px;
-  background: color-mix(in srgb, var(--warm-ivory) 85%, transparent);
+  background: color-mix(in srgb, var(--text-primary) 90%, transparent);
   backdrop-filter: blur(4px);
   width: 42px;
   height: 42px;
