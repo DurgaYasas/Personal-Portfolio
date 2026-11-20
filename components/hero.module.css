@@ -1,34 +1,35 @@
 .hero {
-  padding-top: 70px;
-  padding-bottom: 76px;
+  padding-top: 48px;
+  padding-bottom: 88px;
   text-align: center;
 }
 
 .availability {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 12px;
+  gap: 8px;
+  padding: 9px 16px;
   border: 1px solid var(--accent-line);
   border-radius: 99px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .availability > span {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--status-available);
 }
 
 .portraitFrame {
-  width: 268px;
-  height: 268px;
-  margin: 20px auto 0;
+  width: 224px;
+  height: 224px;
+  margin: 24px auto 0;
   overflow: hidden;
   border-radius: 50%;
   background: var(--accent-secondary);
@@ -54,22 +55,25 @@
 }
 
 .portraitPlaceholder > span {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 750;
-  letter-spacing: -5px;
+  letter-spacing: -0.06em;
 }
 
 .portraitPlaceholder > small {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .title {
-  margin: 22px auto 0;
-  max-width: 760px;
-  font-size: clamp(32px, 4.15vw, 40px);
+  margin: 32px auto 0;
+  max-width: 1200px;
+  /* Keep the hero larger than section headings; 5.5rem is the desktop cap. */
+  font-size: clamp(2.25rem, 6.4vw, 5.5rem);
   font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -1.5px;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
   color: var(--ink);
 }
 
@@ -86,10 +90,10 @@
 }
 
 .summary {
-  max-width: 470px;
-  margin: 22px auto 0;
+  max-width: 680px;
+  margin: 28px auto 0;
   color: var(--text-body);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   font-weight: 450;
 }
@@ -98,8 +102,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 32px;
 }
 
 .primaryAction,
@@ -107,18 +112,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 12px 18px;
+  gap: 10px;
+  padding: 15px 24px;
   border: 1px solid transparent;
   border-radius: 12px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 650;
   line-height: 1.4;
-  min-height: 44px;
+  min-height: 52px;
   transition:
     background 180ms,
     border-color 180ms,
     transform 180ms;
+}
+
+.primaryAction svg,
+.secondaryAction svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .primaryAction {
@@ -149,30 +161,32 @@
 }
 
 .metrics {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
-  margin: 44px auto 0;
+  max-width: 660px;
+  margin: 48px auto 0;
 }
 
 .metrics > div {
   display: flex;
-  flex-direction: column-reverse;
-  gap: 6px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .metrics dd {
+  order: -1;
   margin: 0;
   color: var(--accent);
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 800;
-  letter-spacing: -0.7px;
+  letter-spacing: -0.04em;
   line-height: 1.2;
 }
 
 .metrics dt {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 13px;
   line-height: 1.6;
 }
 
@@ -180,12 +194,19 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-top: 29px;
-  padding: 5px 12px;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 10px 16px;
+  min-height: 44px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   transition: color 180ms;
+}
+
+.scrollCue svg {
+  width: 20px;
+  height: 20px;
 }
 
 .scrollCue:hover {
@@ -194,50 +215,58 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 44px;
-    padding-bottom: 50px;
+    padding-top: 32px;
+    padding-bottom: 60px;
   }
   .portraitFrame {
-    width: 220px;
-    height: 220px;
+    width: 176px;
+    height: 176px;
+    margin-top: 20px;
+  }
+  .portraitPlaceholder {
+    gap: 8px;
+  }
+  .portraitPlaceholder > span {
+    font-size: 48px;
+  }
+  .portraitPlaceholder > small {
+    font-size: 11px;
   }
   .title {
-    margin-top: 26px;
-    font-size: clamp(27px, 6.1vw, 38px);
-    line-height: 1.17;
-    letter-spacing: -1px;
+    margin-top: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.045em;
   }
   .titleLine {
     display: inline;
   }
   .summary {
-    max-width: 440px;
-    font-size: 13px;
-    line-height: 1.8;
+    max-width: 480px;
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.7;
   }
   .actions {
-    gap: 9px;
-    margin-top: 24px;
+    gap: 10px;
+    margin-top: 28px;
   }
   .primaryAction,
   .secondaryAction {
-    padding: 12px;
-    font-size: 10px;
-    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
   }
   .metrics {
-    gap: 23px;
-    margin-top: 35px;
+    gap: 12px;
+    margin-top: 36px;
   }
   .metrics dd {
-    font-size: 28px;
+    font-size: 32px;
   }
   .metrics dt {
-    max-width: 100px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .scrollCue {
-    margin-top: 25px;
+    margin-top: 24px;
   }
 }
 

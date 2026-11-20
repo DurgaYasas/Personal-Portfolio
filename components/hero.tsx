@@ -24,7 +24,7 @@ export function Hero() {
               alt={profile.portrait.alt}
               width={540}
               height={540}
-              sizes="(max-width: 640px) 220px, 268px"
+              sizes="(max-width: 640px) 176px, 224px"
               preload
             />
           ) : (

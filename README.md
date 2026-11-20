@@ -31,6 +31,7 @@ No environment variables, API keys, or external services are required. Do not ru
 - `components/`: navigation, scroll reveals, cards, UI illustrations, and footer.
 - `components/project-thumbnail.tsx` and its CSS module: responsive homepage artwork, editorial feature copy, source labels, and hover/focus motion. Each project's `thumbnail` in `data/projects.ts` configures its artwork, headline, and detail line independently from the article cover.
 - `components/hero.tsx` and `components/hero.module.css`: the centered hero based on the supplied reference, using the shared dark theme.
+- Hero sizing is scoped to `components/hero.module.css`: the heading scales from `2.25rem` up to `5.5rem` (36–88px at the default root size), with a compact portrait and larger supporting copy, actions, and statistics. Actions wrap on narrow screens and metrics keep three equal columns. Edit `.title` to tune the headline size; the mobile override adjusts its spacing and line height.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
 - `data/practice.ts`: screenshot-supplied AI spotlight copy, five sprint steps/timings, and eleven tool self-ratings across four groups.
