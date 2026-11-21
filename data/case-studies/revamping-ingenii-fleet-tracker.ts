@@ -267,7 +267,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Realtime tracking map wireframe, first view",
             width: 1578,
             height: 973,
-            background: "white",
           },
         },
         {
@@ -278,7 +277,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Realtime tracking map wireframe, second view",
             width: 1578,
             height: 973,
-            background: "white",
           },
         },
         {
@@ -293,7 +291,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Vehicle attribute view wireframe",
             width: 1578,
             height: 973,
-            background: "white",
           },
         },
         {
@@ -308,7 +305,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Tracking history wireframe, first view",
             width: 1578,
             height: 973,
-            background: "white",
           },
         },
         {
@@ -319,7 +315,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Tracking history wireframe, second view",
             width: 1578,
             height: 973,
-            background: "white",
           },
         },
         {
@@ -330,7 +325,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Tracking history wireframe, third view",
             width: 1578,
             height: 973,
-            background: "white",
           },
         },
         {
@@ -341,7 +335,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Tracking history wireframe, fourth view",
             width: 1595,
             height: 983,
-            background: "white",
           },
         },
         {
@@ -356,7 +349,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Events history wireframe, first view",
             width: 1638,
             height: 1009,
-            background: "white",
           },
         },
         {
@@ -367,7 +359,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Events history wireframe, second view",
             width: 1639,
             height: 1009,
-            background: "white",
           },
         },
         {
@@ -378,7 +369,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Events history wireframe, third view",
             width: 1638,
             height: 1009,
-            background: "white",
           },
         },
         {
@@ -393,7 +383,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Geofence creation and view wireframe, first view",
             width: 1638,
             height: 1009,
-            background: "white",
           },
         },
         {
@@ -404,7 +393,6 @@ export const ingeniiFleetTracker: SourceCaseStudy = {
             alt: "Geofence creation and view wireframe, second view",
             width: 1638,
             height: 1009,
-            background: "white",
           },
         },
         {
