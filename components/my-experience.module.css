@@ -3,11 +3,9 @@
   scroll-margin-top: 35px;
 }
 .header {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 34px;
+  max-width: 700px;
+  margin: 0 auto 34px;
+  text-align: center;
 }
 .eyebrow {
   color: var(--accent);
@@ -24,6 +22,7 @@
   line-height: 1.2;
 }
 .intro {
+  margin-top: 18px;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.9;
@@ -329,7 +328,6 @@
     padding-block: 45px 50px;
   }
   .header {
-    display: block;
     margin-bottom: 25px;
   }
   .header h2 {
