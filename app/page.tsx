@@ -1,4 +1,3 @@
-import { ArrowDownRight } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { AIInnovation } from "@/components/ai-innovation";
 import { Toolkit } from "@/components/toolkit";
@@ -29,9 +28,6 @@ export default function Home() {
           <Reveal>
             <div className="section-topline">
               <span className="eyebrow">03 / WORKS</span>
-              <span className="section-aside">
-                SELECTED CASE STUDIES <ArrowDownRight size={15} />
-              </span>
             </div>
             <div className="work-heading">
               <h2 id="work-title">
@@ -39,11 +35,6 @@ export default function Home() {
                 <br />
                 <span>More possibility.</span>
               </h2>
-              <p>
-                Selected work across the products
-                <br />
-                and experiences I design.
-              </p>
             </div>
           </Reveal>
           <div className="project-grid">
@@ -57,9 +48,6 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <p className="work-disclosure">
-            <span /> More case studies coming soon.
-          </p>
         </section>
 
         <AIInnovation />

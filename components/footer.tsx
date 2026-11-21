@@ -10,7 +10,6 @@ export function Footer() {
             <span className="status-dot" /> GOOD THINGS START WITH A
             CONVERSATION
           </span>
-          <span className="contact-index">LET’S MAKE SOMETHING MATTER.</span>
         </div>
         <div className="contact-main">
           <h2>
@@ -30,14 +29,6 @@ export function Footer() {
         </div>
         <div className="contact-links">
           <p>Thoughtful products start with thoughtful conversations.</p>
-          <a
-            href="https://github.com/DurgaYasas"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Connect on GitHub <ArrowUpRight size={16} />
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>
         </div>
         <div className="footer-bottom">
           <Link href="/" className="footer-name">

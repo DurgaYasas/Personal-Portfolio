@@ -209,14 +209,6 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.section-aside {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  color: var(--muted);
-  font-size: 8px;
-  letter-spacing: 1.1px;
-}
 .work-heading {
   margin-top: 30px;
   display: flex;
@@ -233,12 +225,6 @@ p {
 }
 .work-heading h2 > span {
   color: var(--muted);
-}
-.work-heading > p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: var(--muted);
-  padding-bottom: 5px;
 }
 .project-grid {
   display: grid;
@@ -353,22 +339,6 @@ p {
   font-size: 7px;
   letter-spacing: 0.7px;
   color: var(--muted);
-}
-.work-disclosure {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 9px;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-top: 33px;
-}
-.work-disclosure > span {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent-secondary);
-  flex-shrink: 0;
 }
 
 /* Bespoke illustrative product surfaces. All displayed UI is sample content. */
@@ -1116,11 +1086,6 @@ p {
   width: 5px;
   height: 5px;
 }
-.contact-index {
-  font-size: 7px;
-  color: var(--muted);
-  letter-spacing: 1px;
-}
 .contact-main {
   display: flex;
   justify-content: space-between;
@@ -1169,15 +1134,6 @@ p {
 .contact-links p {
   color: var(--muted);
   font-size: 10px;
-}
-.contact-links > a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--ink-soft);
-  font-size: 10px;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 7px;
 }
 .footer-bottom {
   border-top: 1px solid var(--line);
@@ -1832,22 +1788,12 @@ p {
     padding-top: 53px;
     padding-bottom: 50px;
   }
-  .section-aside {
-    font-size: 6px;
-    letter-spacing: 0.7px;
-  }
-  .section-aside > svg {
-    display: none;
-  }
   .work-heading {
     margin-top: 25px;
     margin-bottom: 28px;
   }
   .work-heading h2 {
     font-size: 39px;
-  }
-  .work-heading > p {
-    display: none;
   }
   .project-grid {
     grid-template-columns: 1fr;
@@ -1882,14 +1828,6 @@ p {
   .project-open > svg {
     width: 18px;
     height: 18px;
-  }
-  .work-disclosure {
-    font-size: 8px;
-    align-items: flex-start;
-    margin-top: 26px;
-  }
-  .work-disclosure > span {
-    margin-top: 5px;
   }
   .dashboard {
     height: 72%;
@@ -2052,9 +1990,6 @@ p {
   .contact-section .eyebrow {
     font-size: 6px;
     letter-spacing: 0.6px;
-  }
-  .contact-index {
-    display: none;
   }
   .contact-main {
     margin-top: 33px;
