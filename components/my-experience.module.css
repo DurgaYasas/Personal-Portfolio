@@ -179,8 +179,8 @@
   top: 63px;
 }
 .southEast .logoRail {
-  left: 70px;
-  top: 52px;
+  left: 14px;
+  top: 75px;
 }
 .projectLogo {
   display: grid;
@@ -194,8 +194,13 @@
   color: var(--text-inactive);
   box-shadow: -5px 6px 0 var(--surface), -6px 7px 0 var(--line), 0 12px 18px var(--shadow-soft);
   filter: grayscale(1);
+  opacity: 0.6;
   transform: rotateX(12deg) rotateY(-20deg) rotateZ(-8deg);
-  transition: transform 300ms, filter 300ms, background 300ms, border-color 300ms, color 300ms;
+  transition: transform 300ms, filter 300ms, opacity 300ms, background 300ms, border-color 300ms, color 300ms;
+}
+.wordmarkLogo {
+  width: 144px;
+  background: var(--illustration-paper);
 }
 .projectLogo > span {
   font-size: 14px;
@@ -215,6 +220,9 @@
   filter: grayscale(0);
   opacity: 1;
   transform: translateY(-5px) rotateX(8deg) rotateY(-12deg) rotateZ(-4deg);
+}
+.mapPin[data-active="true"] .wordmarkLogo {
+  background: var(--illustration-paper);
 }
 .mapHelp {
   position: absolute;

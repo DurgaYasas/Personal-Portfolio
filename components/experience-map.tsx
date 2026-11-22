@@ -23,14 +23,19 @@ function position(country: ExperienceCountry) {
 }
 
 function ProjectLogo({ project }: { project: ExperienceProject }) {
+  const width = project.logo?.width ?? 72;
+  const height = project.logo?.height ?? 48;
+  const wordmark = width / height > 2;
+
   return (
-    <span className={styles.projectLogo}>
+    <span className={`${styles.projectLogo} ${wordmark ? styles.wordmarkLogo : ""}`}>
       {project.logo ? (
         <Image
           src={project.logo.src}
           alt=""
-          width={72}
-          height={48}
+          width={width}
+          height={height}
+          sizes={wordmark ? "128px" : "40px"}
         />
       ) : (
         <span>{project.brand}</span>

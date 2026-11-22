@@ -4,7 +4,7 @@ export type ExperienceProject = {
   brand: string;
   description: string;
   href?: string;
-  logo?: { src: string; alt: string };
+  logo?: { src: string; alt: string; width?: number; height?: number };
 };
 
 export type ExperienceCountry = {
@@ -19,7 +19,8 @@ export type ExperienceCountry = {
 };
 
 // Country/project assignments use supplied career and case-study content only.
-// Singapore and USA await confirmation. Original brand artwork can be added via logo.
+// Nex Scheduler's Singapore assignment and these original logos were supplied by
+// the owner. USA projects still await confirmation.
 export const experienceCountries: ExperienceCountry[] = [
   {
     id: "sri-lanka",
@@ -37,6 +38,12 @@ export const experienceCountries: ExperienceCountry[] = [
         description:
           "Reimagining search & discovery for Sri Lanka's leading food and market delivery app.",
         href: "/work/pickme-search-revamp",
+        logo: {
+          src: "/images/logos/pickme.png",
+          alt: "PickMe",
+          width: 512,
+          height: 512,
+        },
       },
     ],
   },
@@ -48,7 +55,20 @@ export const experienceCountries: ExperienceCountry[] = [
     longitude: 103.8198,
     latitude: 1.3521,
     labelPosition: "southEast",
-    projects: [],
+    projects: [
+      {
+        id: "nex-scheduler",
+        name: "Nex Scheduler",
+        brand: "Nex Scheduler",
+        description: "Project work on Nex Scheduler in Singapore.",
+        logo: {
+          src: "/images/logos/nex-scheduler.png",
+          alt: "Nex Scheduler",
+          width: 392,
+          height: 59,
+        },
+      },
+    ],
   },
   {
     id: "uae",
@@ -65,6 +85,12 @@ export const experienceCountries: ExperienceCountry[] = [
         brand: "du",
         description:
           "Mobile and web application design for the UAE's telecom operator du Mobile, through Arimac.",
+        logo: {
+          src: "/images/logos/du.png",
+          alt: "du",
+          width: 637,
+          height: 636,
+        },
       },
     ],
   },

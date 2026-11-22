@@ -77,9 +77,9 @@ The map fills the explorer without a country-chip toolbar or side panel. It star
 | `projects`                               | An array; empty shows a coming-soon message | Project cards for the selected country                      |
 | Project `brand`, `name`, `description`   | Supplied project content                    | Short wordmark fallback, title, and summary                 |
 | Project `href`                           | Optional                                    | Enables a case-study link only where one exists             |
-| Project `logo`                           | Optional `{ src, alt }`                     | Displays original logo artwork instead of the text wordmark |
+| Project `logo`                           | Optional `{ src, alt, width?, height? }`    | Displays original artwork; wide source dimensions select a wider wordmark badge |
 
-Confirmed entries currently link PickMe Search Revamp to Sri Lanka and du Mobile via Arimac to the UAE. The Singapore and USA project lists await the owner's confirmation; no clients, locations, results, or roles have been inferred for them. Original logos were not supplied, so the current badges are text wordmarks. Add original assets under `public/images/logos/` and set each project's `logo`, for example `{ src: "/images/logos/pickme.svg", alt: "PickMe" }`. The map requires no API key, map SDK, geolocation permission, or external runtime requests.
+Confirmed entries link PickMe Search Revamp to Sri Lanka, du Mobile via Arimac to the UAE, and the owner-confirmed Nex Scheduler project to Singapore. The three supplied PNG logos are stored unchanged under `public/images/logos/`. All badges start in grayscale at reduced opacity; only the selected country's badges restore their full appearance. The wider Nex Scheduler wordmark uses a light badge surface to keep its original dark lettering legible. The USA project list still awaits confirmation; no projects or outcomes have been inferred for it. The map requires no API key, map SDK, geolocation permission, or external runtime requests.
 
 ## Content status
 
