@@ -6,8 +6,6 @@ import type { CaseStudyImage, SourceCaseStudy } from "./case-studies/types";
 export type ProjectThumbnailConfig = {
   variant: "illustration" | "interface";
   image: CaseStudyImage;
-  headline: string[];
-  detail: string;
 };
 
 export type ProjectCover = {
@@ -57,8 +55,6 @@ export const projects: Project[] = [
         width: 1935,
         height: 813,
       },
-      headline: ["Find your", "next craving."],
-      detail: "Food search & discovery",
     },
   },
   {
@@ -78,8 +74,6 @@ export const projects: Project[] = [
         width: 1938,
         height: 811,
       },
-      headline: ["Scan. Split.", "Settle."],
-      detail: "QR payments & flexible bill splitting",
     },
     cover: {
       wordmark: "Payments",
@@ -104,8 +98,6 @@ export const projects: Project[] = [
         width: 1920,
         height: 1048,
       },
-      headline: ["Clarity,", "in motion."],
-      detail: "Fleet tracking & vehicle insights",
     },
     cover: {
       wordmark: "Ingenii",

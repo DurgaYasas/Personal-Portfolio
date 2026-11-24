@@ -14,10 +14,7 @@ export function ProjectCard({ project }: { project: Project }) {
       >
         <div className="project-image-wrap">
           {project.thumbnail ? (
-            <ProjectThumbnail
-              thumbnail={project.thumbnail}
-              brand={project.cover?.wordmark ?? project.title.split(" ")[0]}
-            />
+            <ProjectThumbnail thumbnail={project.thumbnail} />
           ) : (
             <CaseStudyCover
               title={project.title}

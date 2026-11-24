@@ -5,10 +5,8 @@ import styles from "./project-thumbnail.module.css";
 // Home-page artwork is separate from each article's original imagery and cover.
 export function ProjectThumbnail({
   thumbnail,
-  brand,
 }: {
   thumbnail: ProjectThumbnailConfig;
-  brand: string;
 }) {
   const original = thumbnail.variant === "interface";
   return (
@@ -22,9 +20,8 @@ export function ProjectThumbnail({
           <Image
             src={thumbnail.image.src}
             alt={thumbnail.image.alt}
-            width={thumbnail.image.width}
-            height={thumbnail.image.height}
-            sizes="(max-width: 760px) 85vw, 860px"
+            fill
+            sizes="(max-width: 760px) 85vw, 1100px"
             className={styles.screenImage}
           />
         </div>
@@ -37,21 +34,6 @@ export function ProjectThumbnail({
           className={styles.artwork}
         />
       )}
-      <div className={styles.copy}>
-        <span className={styles.brand}>{brand}</span>
-        <div className={styles.story}>
-          <span className={styles.eyebrow}>PRODUCT DESIGN / CASE STUDY</span>
-          <div className={styles.headline}>
-            {thumbnail.headline.map((line) => (
-              <span key={line}>{line}</span>
-            ))}
-          </div>
-          <p>{thumbnail.detail}</p>
-        </div>
-        <span className={styles.provenance}>
-          <span /> {original ? "Original project UI" : "Illustrative cover"}
-        </span>
-      </div>
     </div>
   );
 }

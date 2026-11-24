@@ -29,7 +29,7 @@ No environment variables, API keys, or external services are required. Do not ru
 - `app/work/[slug]/page.tsx`: statically generated case-study template and metadata.
 - `app/globals.css`: responsive visual system and illustrative product surfaces, alongside Tailwind.
 - `components/`: navigation, scroll reveals, cards, UI illustrations, and footer.
-- `components/project-thumbnail.tsx` and its CSS module: responsive homepage artwork, editorial feature copy, source labels, and hover/focus motion. Each project's `thumbnail` in `data/projects.ts` configures its artwork, headline, and detail line independently from the article cover.
+- `components/project-thumbnail.tsx` and its CSS module: responsive image-only homepage thumbnails and hover/focus motion. Each project's `thumbnail` in `data/projects.ts` configures its artwork and presentation variant independently from the article cover.
 - `components/hero.tsx` and `components/hero.module.css`: the centered hero based on the supplied reference, using the shared dark theme.
 - Hero sizing is scoped to `components/hero.module.css`: the heading scales from `2.25rem` up to `5.5rem` (36–88px at the default root size), with a compact portrait and larger supporting copy, actions, and statistics. Actions wrap on narrow screens and metrics keep three equal columns. Edit `.title` to tune the headline size; the mobile override adjusts its spacing and line height.
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
@@ -89,7 +89,7 @@ The hero uses the owner-supplied portrait at `public/images/durga-yasas.png`, co
 
 **PickMe Search Revamp** uses the exact article wording from the supplied case-study PDF, including the role and period, interview quotations, research and testing percentages, solution descriptions, KPI definitions and before/after values, and reflections. Browser print dates, repeated page headers, URLs, and page counters are excluded. Line wrapping and page breaks are reflowed for the web; compound-word hyphens are preserved. The PDF is a case study, not a resume, and is not connected to the resume download button.
 
-The PickMe homepage thumbnail uses an illustrative food-search cover, explicitly labeled as illustrative rather than original app UI. The article has 11 image positions with their original captions. When original images arrive, add them under `public/images/pickme-search-revamp/` and set the corresponding figure block's `image` field:
+The PickMe homepage thumbnail uses an illustrative food-search cover, identified as illustrative in its accessible project link name. The article has 11 image positions with their original captions. When original images arrive, add them under `public/images/pickme-search-revamp/` and set the corresponding figure block's `image` field:
 
 ```ts
 image: {
@@ -104,7 +104,7 @@ Use the actual image dimensions and a meaningful description. The renderer repla
 
 The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**. All three homepage cards use coordinated image-led covers and appear in a single column. Each links to its supplied case study. The `upcoming` project type remains available for future titles whose articles have not yet been supplied.
 
-Homepage thumbnail artwork for PickMe and table payments is generated illustration stored under `public/images/thumbnails/`. It depicts grouped food-search results and QR-based bill splitting/tipping respectively; the example UI and imagery are not original shipped product screens. Both covers display an Illustrative cover label, also conveyed in their accessible link names. The Ingenii thumbnail uses the actual original cover image from the supplied PDF, displayed in a CSS frame and labeled Original project UI. Article text, image galleries, and article headers remain separate from these homepage thumbnail settings.
+Homepage thumbnail artwork for PickMe and table payments is generated illustration stored under `public/images/thumbnails/`. It depicts grouped food-search results and QR-based bill splitting/tipping respectively; the example UI and imagery are not original shipped product screens. All three thumbnails display imagery without added text overlays. The illustrative status of the first two remains in their accessible project link names. The Ingenii thumbnail uses the actual original cover image from the supplied PDF, centered in a CSS frame. Project titles, descriptions, and tags remain below the images. Article text, image galleries, and article headers remain separate from these homepage thumbnail settings.
 
 **Seamless Payment Experience at the Table** transcribes the supplied **Seamless Payment Experience at the Table - Durga Yasas.html** export from the user's Carbonmade portfolio. All 107 non-empty article text fragments are retained in their original reading order across 15 sections. Original spelling, the repeated Wireframes heading, both value-impact sections, the research sample-size caveat, and the hypothetical test/KPI wording are preserved. Source line wrapping is reflowed for the web; navigation, site branding, and the copyright footer are excluded. No role or period is shown because neither is stated in the article.
 
