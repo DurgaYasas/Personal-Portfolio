@@ -106,6 +106,7 @@ export type ArticleBlock =
       caption?: string;
       sourceImage?: { url: string; width: number; height: number };
       image?: CaseStudyImage;
+      showFullSizeLink?: boolean;
     }
   | {
       type: "table";

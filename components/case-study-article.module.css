@@ -336,6 +336,20 @@ h4.subheading {
   height: auto;
   border-radius: 10px;
 }
+.fullSizeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-top: 4px;
+  color: var(--accent);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.fullSizeLink:hover {
+  color: var(--ink);
+}
 .tableScroll {
   width: 100%;
   overflow-x: auto;

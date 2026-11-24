@@ -147,6 +147,18 @@ function ArticleBlocks({
                 <span>Image to be added</span>
               </div>
             )}
+            {block.image && block.showFullSizeLink && (
+              <a
+                className={styles.fullSizeLink}
+                href={block.image.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View full-size image: ${block.caption ?? block.image.alt} (opens in a new tab)`}
+              >
+                View full-size image
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </a>
+            )}
           </figure>
         );
       case "table":

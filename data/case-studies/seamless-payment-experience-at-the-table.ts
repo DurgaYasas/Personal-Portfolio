@@ -1,7 +1,7 @@
 import type { SourceCaseStudy } from "./types";
 
 // Transcribed from the supplied Carbonmade HTML export. Preserve the source wording.
-// Research tables were supplied separately; other source image positions remain.
+// Research tables and wireframe boards were supplied separately.
 // Role and period are omitted because the source does not state them.
 export const seamlessPaymentExperience: SourceCaseStudy = {
   title: "Seamless Payment Experience at the Table",
@@ -292,6 +292,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "qr-code-scan",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/qr-code-scan.png",
+            alt: "Scanning a table QR code opens language selection, the itemized bill summary, and the choice to pay entirely or split by item, equally, or by a custom amount.",
+            width: 2420,
+            height: 918,
+            background: "white",
+          },
           caption: "QR code scan",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/85nmifbG7G7fwNuUoNZdgD;1920x728.png?auto=webp",
@@ -308,6 +316,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "pay-the-bill-entirely",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/pay-the-bill-entirely.png",
+            alt: "The full-bill payment flow moves from language selection and bill review to selecting Apple Pay, optional tipping, payment confirmation, and a receipt.",
+            width: 3407,
+            height: 1231,
+            background: "white",
+          },
           caption: "Pay the Bill Entirely",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/4HZ41O07tNRfHU6P8HQuIS;1920x693.png?auto=webp",
@@ -318,6 +334,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "item-split",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/item-split.png",
+            alt: "The conductor selects an item, assigns the remaining items to friends through phone contacts, selects a payment method, and receives confirmation that their share is paid.",
+            width: 16527,
+            height: 6177,
+            background: "white",
+          },
           caption: "Item Split",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/eNtNhGfEdfZb2g8wCNMmev;1920x717.png?auto=webp",
@@ -332,6 +356,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "equal-split",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/equal-split.png",
+            alt: "The conductor chooses equal splitting, sets the number of diners, assigns a friend from contacts, and completes payment for their equal share.",
+            width: 11018,
+            height: 3334,
+            background: "white",
+          },
           caption: "Equal Split",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/40nrCj6mi2TdVu2adowhbD;1920x580.png?auto=webp",
@@ -346,6 +378,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "custom-split",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/custom-split.png",
+            alt: "The conductor enters a custom payment amount, assigns the remaining balance to friends, and completes payment after choosing a payment method.",
+            width: 10414,
+            height: 5068,
+            background: "white",
+          },
           caption: "Custom Split",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/gKH7RlORTbzexYwMexV2i1;1920x934.png?auto=webp",
@@ -365,6 +405,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
             {
               type: "figure",
               id: "shared-link-equal-split",
+              showFullSizeLink: true,
+              image: {
+                src: "/images/seamless-payment-experience-at-the-table/shared-link-equal-split.png",
+                alt: "A participant opens a shared link, reviews an equal split between two people and their USD 155 share, then proceeds to payment.",
+                width: 3160,
+                height: 2832,
+                background: "white",
+              },
               caption:
                 "Equal split by an added person through the shared payment link",
               sourceImage: {
@@ -380,6 +428,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
             {
               type: "figure",
               id: "shared-link-item-split",
+              showFullSizeLink: true,
+              image: {
+                src: "/images/seamless-payment-experience-at-the-table/shared-link-item-split.png",
+                alt: "A participant opens a shared item-split link, selects an item to change their payable amount from zero to USD 100, and proceeds to payment.",
+                width: 4294,
+                height: 2832,
+                background: "white",
+              },
               caption:
                 "Item split by an added person through the shared payment link",
               sourceImage: {
@@ -391,6 +447,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
             {
               type: "figure",
               id: "shared-link-custom-split",
+              showFullSizeLink: true,
+              image: {
+                src: "/images/seamless-payment-experience-at-the-table/shared-link-custom-split.png",
+                alt: "A shared custom-split link shows the total bill, amount already settled, and the participant's USD 77.5 share before payment-method selection.",
+                width: 3392,
+                height: 2832,
+                background: "white",
+              },
               caption:
                 "Custom split by an added person through the shared payment link",
               sourceImage: {
@@ -402,6 +466,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
             {
               type: "figure",
               id: "adding-tips",
+              showFullSizeLink: true,
+              image: {
+                src: "/images/seamless-payment-experience-at-the-table/adding-tips.png",
+                alt: "Tip selection and localization examples compare a direct Add a Tip prompt for the USA with an optional staff-appreciation prompt for Japan.",
+                width: 4304,
+                height: 4304,
+                background: "white",
+              },
               caption: "Adding tips",
               sourceImage: {
                 url: "https://carbon-media.accelerator.net/0000000mwIt/3T80CQIkckpf4pJFWBt8ZK;1920x1920.png?auto=webp",
@@ -455,6 +527,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "failure-states",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/failure-states.png",
+            alt: "Payment-declined screens retain alternative payment methods; an expired link offers Request New Link; a waiting state explains that another diner is organizing the split.",
+            width: 2307,
+            height: 1690,
+            background: "white",
+          },
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/jdJtaVs18DucIno1YwFF9w;1920x1406.png?auto=webp",
             width: 1920,
@@ -494,6 +574,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "merchant-table-status",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/merchant-table-status.png",
+            alt: "Staff see collection progress and each diner's payment status. Close table is disabled while the bill is partially collected and enabled when the full total is collected.",
+            width: 1400,
+            height: 1194,
+            background: "white",
+          },
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/ihLboLvRPznbJuCMhhgjBQ;1400x1194.png?auto=webp",
             width: 1400,
