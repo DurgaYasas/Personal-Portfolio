@@ -35,10 +35,10 @@ No environment variables, API keys, or external services are required. Do not ru
 - `data/profile.ts`: approved hero copy, statistics, portrait, and resume link.
 - `data/about.ts`: reference-supplied career entries, achievements, and skill percentages.
 - `data/practice.ts`: screenshot-supplied AI spotlight copy, five sprint steps/timings, and eleven tool self-ratings across four groups.
-- `components/ai-innovation.tsx`, `toolkit.tsx`, and `practice-sections.module.css`: the two sections after Works, using the shared dark theme and reduced-motion-aware reveal/hover behavior.
+- `components/ai-innovation.tsx`, `toolkit.tsx`, and `practice-sections.module.css`: the two sections after Skills & Expertise, using the shared dark theme and reduced-motion-aware reveal/hover behavior.
 - `data/experience.ts`: country locations, confirmed project descriptions, case-study links, and optional original logo paths for the interactive My experience map.
-- `components/my-experience.tsx`, `experience-map.tsx`, and `my-experience.module.css`: the section between the hero and career journey. `experience-world-map.tsx` renders the locally bundled Natural Earth country outlines on the server; see `data/maps/README.md` for provenance.
-- `components/career-journey.tsx` and `components/skills-expertise.tsx`: the two sections immediately after the hero; `profile-motion.tsx` provides the scroll-driven timeline and one-time skill-bar fills. Their styles live in `profile-sections.module.css`.
+- `components/my-experience.tsx`, `experience-map.tsx`, and `my-experience.module.css`: the world map section immediately after Selected case studies. `experience-world-map.tsx` renders the locally bundled Natural Earth country outlines on the server; see `data/maps/README.md` for provenance.
+- `components/career-journey.tsx` and `components/skills-expertise.tsx`: Career Journey & Philosophy immediately follows the hero; Skills & Expertise follows the world map. `profile-motion.tsx` provides the scroll-driven timeline and one-time skill-bar fills. Their styles live in `profile-sections.module.css`.
 - `data/projects.ts`: typed project directions. Adding an entry generates another project route and homepage card.
 - `data/case-studies/`: structured, source-based articles. `pickme-search-revamp.ts` transcribes the supplied 16-page **Durga Yasas.pdf**.
 - `data/case-studies/seamless-payment-experience-at-the-table.ts`: the exact article wording from the supplied Carbonmade HTML export, with source image references for later asset replacement.

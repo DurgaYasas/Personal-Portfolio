@@ -17,9 +17,7 @@ export default function Home() {
       <Navigation home workCount={projects.length} />
       <main id="main">
         <Hero />
-        <MyExperience />
         <CareerJourney />
-        <SkillsExpertise />
 
         <section
           id="work"
@@ -46,6 +44,8 @@ export default function Home() {
           </div>
         </section>
 
+        <MyExperience />
+        <SkillsExpertise />
         <AIInnovation />
         <Toolkit />
       </main>
