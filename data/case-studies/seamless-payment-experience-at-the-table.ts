@@ -262,6 +262,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "conductor-led-payment-flow",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/conductor-led-payment-flow.png",
+            alt: "The conductor scans a table QR code, selects a language, and reviews the bill. They can pay entirely or split equally, by item, or by a custom amount, assign participants, choose or add a payment method, optionally tip, pay, and request an email receipt.",
+            width: 4344,
+            height: 1258,
+            background: "white",
+          },
           caption: "Conductor-Led Payment Flow",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/6RNQyMvzTRUdgLkaO0NP45;1920x556.png?auto=webp",
@@ -272,6 +280,14 @@ export const seamlessPaymentExperience: SourceCaseStudy = {
         {
           type: "figure",
           id: "shared-payment-link-flow",
+          showFullSizeLink: true,
+          image: {
+            src: "/images/seamless-payment-experience-at-the-table/shared-payment-link-flow.png",
+            alt: "A participant opens a shared link and reviews their payment summary. For an item split they select their items, then choose or add a payment method, optionally select a tip amount, pay their share, and reach the payment summary or the end of the flow.",
+            width: 2900,
+            height: 748,
+            background: "white",
+          },
           caption: "Sharable Payment Link Flow (for added participants)",
           sourceImage: {
             url: "https://carbon-media.accelerator.net/0000000mwIt/9x5EQ1pc4Kagq5vRTBVKFt;1920x495.png?auto=webp",
