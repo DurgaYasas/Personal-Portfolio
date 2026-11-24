@@ -22,6 +22,9 @@
   font-weight: 750;
   text-wrap: balance;
 }
+.sectionHeader.titleOnly h2 {
+  margin-top: 0;
+}
 .facts {
   display: flex;
   justify-content: center;

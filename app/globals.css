@@ -204,27 +204,14 @@ p {
   padding-top: 88px;
   padding-bottom: 89px;
 }
-.section-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .work-heading {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   margin-bottom: 40px;
 }
-.work-heading h2,
 .about-grid h2 {
   font-size: clamp(38px, 4.1vw, 60px);
   line-height: 1.13;
   font-weight: 500;
   letter-spacing: -0.055em;
-}
-.work-heading h2 > span {
-  color: var(--muted);
 }
 .project-grid {
   display: grid;
@@ -1789,11 +1776,7 @@ p {
     padding-bottom: 50px;
   }
   .work-heading {
-    margin-top: 25px;
     margin-bottom: 28px;
-  }
-  .work-heading h2 {
-    font-size: 39px;
   }
   .project-grid {
     grid-template-columns: 1fr;

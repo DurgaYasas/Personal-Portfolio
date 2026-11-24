@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
 import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/data/projects";
+import profileStyles from "@/components/profile-sections.module.css";
 
 export default function Home() {
   return (
@@ -26,16 +27,11 @@ export default function Home() {
           aria-labelledby="work-title"
         >
           <Reveal>
-            <div className="section-topline">
-              <span className="eyebrow">03 / WORKS</span>
-            </div>
-            <div className="work-heading">
-              <h2 id="work-title">
-                Less friction.
-                <br />
-                <span>More possibility.</span>
-              </h2>
-            </div>
+            <header
+              className={`${profileStyles.sectionHeader} ${profileStyles.titleOnly} work-heading`}
+            >
+              <h2 id="work-title">Selected case studies</h2>
+            </header>
           </Reveal>
           <div className="project-grid">
             {projects.map((project, index) => (
