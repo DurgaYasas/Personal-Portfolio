@@ -1,4 +1,5 @@
 import type { SourceCaseStudy } from "./types";
+import { pickmeScreenShowcases } from "./pickme-screen-showcases";
 
 // Transcribed from the supplied 16-page PDF. Preserve the author's wording.
 // Browser print headers, footers, and repeated navigation are not article text.
@@ -41,6 +42,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
         {
           type: "figure",
           id: "previous-search-screens",
+          presentation: pickmeScreenShowcases["previous-search-screens"],
           showFullSizeLink: true,
           image: {
             // Supplied export: 9U0Frz1QHSYb3l5NP3qNhO.webp
@@ -215,6 +217,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "grouped-suggestions-before",
+              presentation: pickmeScreenShowcases["grouped-suggestions-before"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: h872XuxHWUleR3TVHRGDbr.webp
@@ -230,6 +233,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "grouped-suggestions-exploration",
+              presentation: pickmeScreenShowcases["grouped-suggestions-exploration"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: 873jkeKBnTEdDp0rvMCU06.webp
@@ -245,6 +249,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "grouped-suggestions-final",
+              presentation: pickmeScreenShowcases["grouped-suggestions-final"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: jDQrdmmCaJ9d7QCXDMuuyi.webp
@@ -281,6 +286,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "outlet-centric-before",
+              presentation: pickmeScreenShowcases["outlet-centric-before"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: 9U0Frz1QHSYb3l5NP3qNhO.webp
@@ -296,6 +302,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "outlet-centric-exploration",
+              presentation: pickmeScreenShowcases["outlet-centric-exploration"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: lU58NG6sryBeliC7VoqhCD.webp
@@ -311,6 +318,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "result-component-first-variant",
+              presentation: pickmeScreenShowcases["result-component-first-variant"],
               caption: "Result component: wireframe and variant 1",
               showFullSizeLink: true,
               image: {
@@ -325,6 +333,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "result-component-other-variants",
+              presentation: pickmeScreenShowcases["result-component-other-variants"],
               caption: "Result component: variants 2 and 3",
               showFullSizeLink: true,
               image: {
@@ -339,6 +348,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "outlet-centric-final",
+              presentation: pickmeScreenShowcases["outlet-centric-final"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: gUaqPwCTZwIc0CDxLm8jxR.webp
@@ -354,6 +364,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "outlet-centric-component",
+              presentation: pickmeScreenShowcases["outlet-centric-component"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: 2ZjjAPht1Rzd63xBQPcq15.webp
@@ -381,6 +392,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "explore-all-items",
+              presentation: pickmeScreenShowcases["explore-all-items"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: 4jwTVrH9BZwdXctJmXUfld.webp
@@ -396,6 +408,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "view-more-branches",
+              presentation: pickmeScreenShowcases["view-more-branches"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: 7b9BfuKtMRRdnZOhB6Cwy7.webp
@@ -423,6 +436,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "prominent-search-bar-final",
+              presentation: pickmeScreenShowcases["prominent-search-bar-final"],
               showFullSizeLink: true,
               image: {
                 // Supplied export: 9kIE9Bu0brpd6OvfKpcWqh.webp
@@ -533,6 +547,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
         {
           type: "figure",
           id: "result-component-refinements",
+          presentation: pickmeScreenShowcases["result-component-refinements"],
           caption: "Result component refinements",
           showFullSizeLink: true,
           image: {
@@ -547,6 +562,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
         {
           type: "figure",
           id: "result-variants-after-testing",
+          presentation: pickmeScreenShowcases["result-variants-after-testing"],
           caption: "Outlet/cuisine and dish result variants",
           showFullSizeLink: true,
           image: {
@@ -561,6 +577,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
         {
           type: "figure",
           id: "search-results-after-testing",
+          presentation: pickmeScreenShowcases["search-results-after-testing"],
           caption: "Outlet, cuisine, and dish search results",
           showFullSizeLink: true,
           image: {
@@ -575,6 +592,7 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
         {
           type: "figure",
           id: "search-flow-after-testing",
+          presentation: pickmeScreenShowcases["search-flow-after-testing"],
           caption: "Search flow after testing",
           showFullSizeLink: true,
           image: {

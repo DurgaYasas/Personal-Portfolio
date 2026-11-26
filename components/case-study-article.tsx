@@ -13,6 +13,7 @@ import {
 import { Footer } from "./footer";
 import { Navigation } from "./navigation";
 import { Reveal } from "./reveal";
+import { ScreenShowcase } from "./screen-showcase";
 import styles from "./case-study-article.module.css";
 
 const tableStyles = {
@@ -128,7 +129,9 @@ function ArticleBlocks({
                 {block.caption}
               </figcaption>
             )}
-            {block.image ? (
+            {block.image && block.presentation ? (
+              <ScreenShowcase id={block.id} image={block.image} presentation={block.presentation} />
+            ) : block.image ? (
               <Image
                 className={styles.figureImage}
                 src={block.image.src}

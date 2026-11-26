@@ -105,6 +105,18 @@ image: {
 
 Use the actual image dimensions and a meaningful description; set the figure's `showFullSizeLink: true` to retain access to the original. All seventeen PickMe figure placements are populated. The original article text, research figures, quotations, and KPI table are unchanged. No replacement project UI has been synthesized.
 
+PickMe figures now use the native `ScreenShowcase` presentation in `components/screen-showcase.tsx`, configured in `data/case-studies/pickme-screen-showcases.ts`. Complete mobile screens sit in consistent device frames; standalone component studies use white presentation cards. Source-coordinate crops display the original pixels without baking another set of images. Captions and annotation cards are selectable HTML, and connectors use SVG/CSS. Detail connectors follow their screen and note positions on resize; the final flow branches from suggestions into cuisine, dish, and outlet results. On narrow screens, comparisons stack and each branch is explicitly labelled as coming from suggestions. No motion is added.
+
+| Presentation property | Values / purpose |
+| --- | --- |
+| `layout` | `comparison` (default), `detail` (notes beside a visual), `sequence` (one action between screens), `branch` (first panel leads to the other three) |
+| `panels` | Each panel has a unique `id`, editable `title`, a `phone` or `component` frame, and an original-image `crop` rectangle |
+| `notes` | Editable titles/text; optional `anchor` is a vertical fraction of the visual for a detail connector |
+| `annotationMasks` | Small presentation overlays cover only old flattened arrow marks over blank UI backgrounds; original files are unchanged |
+| `connectorLabel` | Describes the action or branch choice; direction is also communicated through screen titles and reading order |
+
+Keep crops and annotation overlays within the source dimensions, and review the rendered screen before changing coordinates. Full-size links still open the original complete boards. Payment and fleet figures keep their existing presentation.
+
 The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**. All three homepage cards use coordinated image-led covers and appear in a single column. Each links to its supplied case study. The `upcoming` project type remains available for future titles whose articles have not yet been supplied.
 
 Homepage thumbnail artwork for PickMe and table payments is generated illustration stored under `public/images/thumbnails/`. It depicts grouped food-search results and QR-based bill splitting/tipping respectively; the example UI and imagery are not original shipped product screens. All three thumbnails display imagery without added text overlays. The illustrative status of the first two remains in their accessible project link names. The Ingenii thumbnail uses the actual original cover image from the supplied PDF, centered in a CSS frame. Project titles, descriptions, and tags remain below the images. Article text, image galleries, and article headers remain separate from these homepage thumbnail settings.

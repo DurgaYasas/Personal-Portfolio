@@ -6,6 +6,19 @@ export type CaseStudyImage = {
   background?: "white";
 };
 
+export type ScreenShowcasePresentation = {
+  layout?: "comparison" | "detail" | "sequence" | "branch";
+  connectorLabel?: string;
+  panels: {
+    id: string;
+    title: string;
+    frame: "phone" | "component";
+    crop: { x: number; y: number; width: number; height: number };
+    annotationMasks?: { x: number; y: number; width: number; height: number; color?: string }[];
+    notes?: { title: string; text: string; anchor?: number }[];
+  }[];
+};
+
 export type CompetitorAnalysisBlock = {
   type: "competitor-analysis";
   id: string;
@@ -107,6 +120,7 @@ export type ArticleBlock =
       sourceImage?: { url: string; width: number; height: number };
       image?: CaseStudyImage;
       showFullSizeLink?: boolean;
+      presentation?: ScreenShowcasePresentation;
     }
   | {
       type: "table";
