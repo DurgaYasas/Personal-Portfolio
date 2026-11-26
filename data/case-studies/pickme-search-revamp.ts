@@ -2,7 +2,7 @@ import type { SourceCaseStudy } from "./types";
 
 // Transcribed from the supplied 16-page PDF. Preserve the author's wording.
 // Browser print headers, footers, and repeated navigation are not article text.
-// Figure captions retain the source wording; original images will be supplied later.
+// Original figure captions retain the source wording; supplied boards fill their positions.
 export const pickmeSearchRevamp: SourceCaseStudy = {
   title: "PickMe Search Revamp",
   subtitle:
@@ -10,7 +10,11 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
   role: "Senior UX Designer",
   period: "Sep 2023 - Present",
   tags: ["Super App", "Search UX", "UX Strategy"],
-  source: { fileName: "Durga Yasas.pdf", pages: 16 },
+  source: {
+    fileName: "Durga Yasas.pdf",
+    pages: 16,
+    url: "https://durgayasas.carbonmade.com/pickme-search-revamp",
+  },
   sections: [
     {
       id: "the-challenge",
@@ -37,6 +41,15 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
         {
           type: "figure",
           id: "previous-search-screens",
+          showFullSizeLink: true,
+          image: {
+            // Supplied export: 9U0Frz1QHSYb3l5NP3qNhO.webp
+            src: "/images/pickme-search-revamp/previous-search-screens.webp",
+            alt: "The earlier Pizza search results use separate Outlets and Items tabs, with outlet banners in one tab and individual dishes in the other.",
+            width: 1920,
+            height: 1468,
+            background: "white",
+          },
           caption: "What PickMe Search screens used to be",
         },
       ],
@@ -202,18 +215,45 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "grouped-suggestions-before",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: h872XuxHWUleR3TVHRGDbr.webp
+                src: "/images/pickme-search-revamp/grouped-suggestions-before.webp",
+                alt: "The earlier Chinese search suggestions appear as a single list of repeated dish names and an outlet, above the keyboard.",
+                width: 1530,
+                height: 1530,
+                background: "white",
+              },
               label: "Before",
               caption: "Existing Design",
             },
             {
               type: "figure",
               id: "grouped-suggestions-exploration",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: 873jkeKBnTEdDp0rvMCU06.webp
+                src: "/images/pickme-search-revamp/grouped-suggestions-exploration.webp",
+                alt: "A Pizza suggestion wireframe and two variants explore grouping outlets, categories or cuisines, and items, with outlet logos and typed-keyword emphasis.",
+                width: 1920,
+                height: 1255,
+                background: "white",
+              },
               label: "Exploration",
               caption: "Design Variants",
             },
             {
               type: "figure",
               id: "grouped-suggestions-final",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: jDQrdmmCaJ9d7QCXDMuuyi.webp
+                src: "/images/pickme-search-revamp/grouped-suggestions-final.webp",
+                alt: "The testing design groups rice suggestions by cuisine, outlets, and dishes, with logos or item images and annotations explaining the three suggestion types.",
+                width: 1920,
+                height: 1920,
+                background: "white",
+              },
               label: "Final",
               caption: "Final Design for Testing",
             },
@@ -241,24 +281,88 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "outlet-centric-before",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: 9U0Frz1QHSYb3l5NP3qNhO.webp
+                src: "/images/pickme-search-revamp/previous-search-screens.webp",
+                alt: "The previous results separate outlet discovery from item discovery into Outlets and Items tabs.",
+                width: 1920,
+                height: 1468,
+                background: "white",
+              },
               label: "Before",
               caption: "Existing Design",
             },
             {
               type: "figure",
               id: "outlet-centric-exploration",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: lU58NG6sryBeliC7VoqhCD.webp
+                src: "/images/pickme-search-revamp/outlet-centric-exploration.webp",
+                alt: "Two Chicken roll result wireframes group dishes by outlet, comparing compact outlet headers with versions that include outlet banners.",
+                width: 1920,
+                height: 1468,
+                background: "white",
+              },
               label: "Exploration",
               caption: "Design Variants",
             },
             {
               type: "figure",
+              id: "result-component-first-variant",
+              caption: "Result component: wireframe and variant 1",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: iFl4sm7lG2zfQbfhPvwi9f.webp
+                src: "/images/pickme-search-revamp/result-component-first-variant.webp",
+                alt: "A compact outlet-and-dish wireframe is compared with variant 1, which includes the outlet logo, closing time, ratings, delivery information, promotions, a dish image, and an Add button.",
+                width: 1920,
+                height: 960,
+                background: "white",
+              },
+            },
+            {
+              type: "figure",
+              id: "result-component-other-variants",
+              caption: "Result component: variants 2 and 3",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: biYewiWdQqOf79LTFst4Zt.webp
+                src: "/images/pickme-search-revamp/result-component-other-variants.webp",
+                alt: "Result component variants 2 and 3 explore outlet banners, an outlet-unavailable status, dish details, and Add buttons.",
+                width: 1920,
+                height: 960,
+                background: "white",
+              },
+            },
+            {
+              type: "figure",
               id: "outlet-centric-final",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: gUaqPwCTZwIc0CDxLm8jxR.webp
+                src: "/images/pickme-search-revamp/outlet-centric-final.webp",
+                alt: "The Chinese Dragon Cafe results show outlet details with matching dishes and a Branches control that opens results from three branches.",
+                width: 1920,
+                height: 1468,
+                background: "white",
+              },
               label: "Final",
               caption: "Final Design for Testing",
             },
             {
               type: "figure",
               id: "outlet-centric-component",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: 2ZjjAPht1Rzd63xBQPcq15.webp
+                src: "/images/pickme-search-revamp/outlet-centric-component.webp",
+                alt: "Variant 4 retains the familiar outlet banner, logo, rating, delivery information, and dish card; annotations explain the visual transition and dish ordering by popularity and order history.",
+                width: 1920,
+                height: 1301,
+                background: "white",
+              },
               label: "Final",
               caption: "Final component for testing",
             },
@@ -277,12 +381,30 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "explore-all-items",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: 4jwTVrH9BZwdXctJmXUfld.webp
+                src: "/images/pickme-search-revamp/explore-all-items.webp",
+                alt: "An Explore all items control follows a dish card when more than four matching results are available.",
+                width: 1920,
+                height: 576,
+                background: "white",
+              },
               label: "Final",
               caption: "Explore all items CTA",
             },
             {
               type: "figure",
               id: "view-more-branches",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: 7b9BfuKtMRRdnZOhB6Cwy7.webp
+                src: "/images/pickme-search-revamp/view-more-branches.webp",
+                alt: "The closest Xilaton Chinese Restaurant branch appears with its dish card, while a Branches (03) control groups the other branches.",
+                width: 1920,
+                height: 1186,
+                background: "white",
+              },
               label: "Final",
               caption: "View more branches CTA",
             },
@@ -301,6 +423,15 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
             {
               type: "figure",
               id: "prominent-search-bar-final",
+              showFullSizeLink: true,
+              image: {
+                // Supplied export: 9kIE9Bu0brpd6OvfKpcWqh.webp
+                src: "/images/pickme-search-revamp/prominent-search-bar-final.webp",
+                alt: "Previous and revamped Food home screens compare a small search icon with a prominent search field beneath the delivery address.",
+                width: 1920,
+                height: 1468,
+                background: "white",
+              },
               label: "Final",
               caption: "Prominent Search Bar",
             },
@@ -398,6 +529,62 @@ export const pickmeSearchRevamp: SourceCaseStudy = {
               text: "When conducting an outlet-specific search, all available branches are now displayed prominently on the results screen sorted by proximity, rather than being categorised under a CTA — reflecting user intent alignment.",
             },
           ],
+        },
+        {
+          type: "figure",
+          id: "result-component-refinements",
+          caption: "Result component refinements",
+          showFullSizeLink: true,
+          image: {
+            // Supplied export: cFnrCZNQj0Fflnx8t3oKVW.webp
+            src: "/images/pickme-search-revamp/result-component-refinements.webp",
+            alt: "Two refined result cards compare compact and banner outlet headers with a darker Branches control; an annotation explains that opening an outlet shows its relevant dishes.",
+            width: 1920,
+            height: 768,
+            background: "white",
+          },
+        },
+        {
+          type: "figure",
+          id: "result-variants-after-testing",
+          caption: "Outlet/cuisine and dish result variants",
+          showFullSizeLink: true,
+          image: {
+            // Supplied export: 0eVfh2Olpg4ebXBmzdDeCt.webp
+            src: "/images/pickme-search-revamp/result-variants-after-testing.webp",
+            alt: "The outlet and cuisine result variant retains an outlet banner, while the dish-search variant uses a compact header without the banner; both show promotions and matching dish cards.",
+            width: 1920,
+            height: 1008,
+            background: "white",
+          },
+        },
+        {
+          type: "figure",
+          id: "search-results-after-testing",
+          caption: "Outlet, cuisine, and dish search results",
+          showFullSizeLink: true,
+          image: {
+            // Supplied export: 7uNmMQGLJ7TbqyevkYbFEE.webp
+            src: "/images/pickme-search-revamp/search-results-after-testing.webp",
+            alt: "Three final result screens compare an outlet search, a cuisine search, and a dish search, retaining banners for outlets and cuisines while giving dish items priority.",
+            width: 1920,
+            height: 1280,
+            background: "white",
+          },
+        },
+        {
+          type: "figure",
+          id: "search-flow-after-testing",
+          caption: "Search flow after testing",
+          showFullSizeLink: true,
+          image: {
+            // Supplied export: 7JhnEJ3mPgSdcPFLpOhMO4.webp
+            src: "/images/pickme-search-revamp/search-flow-after-testing.webp",
+            alt: "The final search flow connects grouped suggestions to cuisine, dish, and outlet results. Annotations show branch controls for cuisine and dish searches, while outlet searches list matching branches without a branch control.",
+            width: 1920,
+            height: 1280,
+            background: "white",
+          },
         },
       ],
     },

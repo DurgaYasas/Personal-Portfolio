@@ -89,18 +89,21 @@ The hero uses the owner-supplied portrait at `public/images/durga-yasas.png`, co
 
 **PickMe Search Revamp** uses the exact article wording from the supplied case-study PDF, including the role and period, interview quotations, research and testing percentages, solution descriptions, KPI definitions and before/after values, and reflections. Browser print dates, repeated page headers, URLs, and page counters are excluded. Line wrapping and page breaks are reflowed for the web; compound-word hyphens are preserved. The PDF is a case study, not a resume, and is not connected to the resume download button.
 
-The PickMe homepage thumbnail uses an illustrative food-search cover, identified as illustrative in its accessible project link name. The article has 11 image positions with their original captions. When original images arrive, add them under `public/images/pickme-search-revamp/` and set the corresponding figure block's `image` field:
+The PickMe homepage thumbnail uses an illustrative food-search cover, identified as illustrative in its accessible project link name. The article now uses all sixteen unique original WebP boards supplied in `Search.zip`, stored unchanged under `public/images/pickme-search-revamp/`. All eleven original figure positions are populated with their original captions. Two additional component-exploration boards appear in **Outlet-Centric Results**, and four refinement/result/flow boards appear in **Adjustments After User Testing**, with descriptive captions. The earlier results image is reused in Overview and the outlet-results Before position. The duplicate `gUaqPwCTZwIc0CDxLm8jxR (1).webp` export is stored once. The live Carbonmade page returned HTTP 403 from this environment, so placement follows the existing PDF-based article and the supplied boards' visible content. The reference URL is retained in the article's `source.url`.
+
+Every board has descriptive alternative text, its supplied dimensions, a white display background for legible annotations over transparency, and a **View full-size image** link to the original file. Source filenames are recorded beside the image entries. To replace a board, update the corresponding figure's `image` field:
 
 ```ts
 image: {
-  src: "/images/pickme-search-revamp/grouped-suggestions-before.png",
+  src: "/images/pickme-search-revamp/grouped-suggestions-before.webp",
   alt: "Description of the supplied design",
-  width: 1600,
-  height: 1000,
+  width: 1530,
+  height: 1530,
+  background: "white",
 }
 ```
 
-Use the actual image dimensions and a meaningful description. The renderer replaces that image's placeholder automatically. Original PickMe article images will be supplied later; the article's figure positions remain placeholders.
+Use the actual image dimensions and a meaningful description; set the figure's `showFullSizeLink: true` to retain access to the original. All seventeen PickMe figure placements are populated. The original article text, research figures, quotations, and KPI table are unchanged. No replacement project UI has been synthesized.
 
 The two previous illustrative concept cards have been replaced with **Seamless Payment Experience at the Table** and **Revamping Ingenii Fleet Tracker**. All three homepage cards use coordinated image-led covers and appear in a single column. Each links to its supplied case study. The `upcoming` project type remains available for future titles whose articles have not yet been supplied.
 
